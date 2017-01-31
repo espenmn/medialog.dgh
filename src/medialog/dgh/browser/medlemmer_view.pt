@@ -12,7 +12,7 @@
          
          <span tal:content="python: user.getProperty('fullname')" />
          <span tal:content="python: user.getProperty('email')" />
- 
+         <span tal:content="python: user.getProperty('fornavn')" />
     </div>
 </metal:content-core>
 
