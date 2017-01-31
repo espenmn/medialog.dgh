@@ -12,11 +12,11 @@ class MedlemmerView(BrowserView):
         return self.template(self.context)
         
     def all_users(self):
-        return plone.api.user.get_users()
+        return api.user.get_users()
         
     def group_users(self):
         group = self.context.group
-        return plone.api.user.get_users(groupname=group)
+        return api.user.get_users(groupname=group)
         
 
 
