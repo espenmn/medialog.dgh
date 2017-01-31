@@ -15,7 +15,7 @@ class MedlemmerView(BrowserView):
         return api.user.get_users()
         
     def group_users(self):
-        group = self.context.group
+        group = self.context.group or None
         return api.user.get_users(groupname=group)
         
 
