@@ -35,3 +35,10 @@ report.html
 !src/medialog
 
 *.pyc
+
+src/medialog/dgh/.DS_Store
+
+*/.DS_Store
+
+.DS_Store
+src/medialog/dgh/.DS_Store
