@@ -11,7 +11,7 @@
     <div id="medlemmer_listing" tal:repeat="user view/group_users">
          
          <span tal:content="python: user.getProperty('fullname')" />
-         
+         <div tal:content="user" />
  
     </div>
 </metal:content-core>
