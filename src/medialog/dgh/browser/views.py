@@ -1,4 +1,3 @@
-from pp.client.plone.browser.compatible import InitializeClass
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
@@ -19,5 +18,5 @@ class MedlemmerView(BrowserView):
         group = context.group
         return plone.api.user.get_users(groupname=group)
         
-InitializeClass(MedlemmerView)
+
 
