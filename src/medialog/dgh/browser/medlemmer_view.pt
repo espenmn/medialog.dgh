@@ -10,9 +10,16 @@
           tal:define="templateId template/getId">
     <div id="medlemmer_listing" tal:repeat="user view/group_users">
          
-         <span tal:content="python: user.getProperty('fullname')" />
-         <span tal:content="python: user.getProperty('email')" />
          <span tal:content="python: user.getProperty('fornavn')" />
+         <span tal:content="python: user.getProperty('etternavn')" />
+         <span tal:content="python: user.getProperty('tittel')" />
+         <span tal:content="python  user.getProperty('groups')" />
+         plone.api.group.get_groups(username=user)
+         
+         <div tal:condition="context/group">
+         	<span tal:content="python: user.getProperty('email')" />
+         </div>
+                  
     </div>
 </metal:content-core>
 
