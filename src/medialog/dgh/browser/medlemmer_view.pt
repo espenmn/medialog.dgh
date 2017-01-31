@@ -9,8 +9,9 @@
    <metal:content-core fill-slot="content-core"
           tal:define="templateId template/getId">
     <div id="medlemmer_listing" tal:repeat="user view/group_users">
-         <span tal:content="user/fullname" />
-         xxx  
+         
+         <span tal:content="python: user.getProperty('fullname')" />
+         
  
     </div>
 </metal:content-core>
