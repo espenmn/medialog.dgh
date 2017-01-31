@@ -1,0 +1,5 @@
+====================
+medialog.dgh
+====================
+
+User documentation

@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="medialog.dgh">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="medialog.dgh.interfaces.IMedialogDghLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="medialog.dgh"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+        name="medlemmer_view"
+        for="plone.dexterity.interfaces.IDexterityContent"
+        layer="medialog.dgh.interfaces.IMedialogDghLayer"
+        class="views.MedlemmerView"
+        permission="zope2.View"
+    />
+
+</configure>
