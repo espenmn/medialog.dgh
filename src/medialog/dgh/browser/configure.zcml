@@ -22,7 +22,7 @@
         name="medlemmer_view"
         for="plone.dexterity.interfaces.IDexterityContent"
         layer="medialog.dgh.interfaces.IMedialogDghLayer"
-        class=".views.MedlemmerView"
+        class="medialog.dgh.browser.views.MedlemmerView"
         permission="zope2.View"
     />
 
