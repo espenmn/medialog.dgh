@@ -13,7 +13,7 @@
          <span tal:content="python: user.getProperty('fornavn')" />
          <span tal:content="python: user.getProperty('etternavn')" />
          <span tal:content="python: user.getProperty('tittel')" />
-         <span tal:content="python  user.getProperty('groups')" />
+         <span tal:content="python  user.getGroups()" />
          plone.api.group.get_groups(username=user)
          
          <div tal:condition="context/group">
