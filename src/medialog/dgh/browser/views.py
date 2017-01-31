@@ -14,8 +14,8 @@ class MedlemmerView(BrowserView):
     def all_users(self):
         return plone.api.user.get_users()
         
-    def group_users(self, context):
-        group = context.group
+    def group_users(self):
+        group = self.context.group
         return plone.api.user.get_users(groupname=group)
         
 
