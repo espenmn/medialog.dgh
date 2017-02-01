@@ -21,8 +21,8 @@ class MedlemmerView(BrowserView):
         
         import pdb; pdb.set_trace()
         for user in usergroup:
-            userlist.append(
-        	 {fullname: user.getProperty('fullname'),
+            uuserdata = dict{
+              fullname: user.getProperty('fullname'),
         	  fornavn: user.getProperty('fornavn'),
         	  etternavn: user.getProperty('etternavn'),
         	  tittel: user.getProperty('tittel'),
@@ -34,5 +34,6 @@ class MedlemmerView(BrowserView):
         	  adresse: user.getProperty('adressse'),
         	  utenbys: user.getProperty('utenbys'),
         	  group:  api.group.get_groups(username=user)
-         	 })
+         	 }
+         	 userlist.append(userdata)
         return userlist
