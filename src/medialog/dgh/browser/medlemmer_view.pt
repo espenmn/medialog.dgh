@@ -21,7 +21,7 @@
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td>${medlem/email}<span tal:condition="python medlem.email==''" class="red">Mangler epost</span> </td>
+           <td>${medlem/email}<span tal:condition="python: medlem.email==''" class="red">Mangler epost</span> </td>
                   
     </tr>
     </tbody>
