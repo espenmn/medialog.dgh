@@ -21,7 +21,7 @@
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td><span tal:condition="not medlem/epost" class="red">Mangler epost</span> </td>
+           <td><span tal:condition="not medlem/email" class="red">Mangler epost</span> </td>
                   
     </tr>
     </tbody>
