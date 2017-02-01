@@ -19,9 +19,9 @@ class MedlemmerView(BrowserView):
         usergroup = api.user.get_users(groupname=group)
         userlist = []
         
+        import pdb; pdb.set_trace()
         for user in usergroup:
-            import pdb; pdb.set_trace()
-        	userlist.append(
+            userlist.append(
         	 {fullname: user.getProperty('fullname'),
         	  fornavn: user.getProperty('fornavn'),
         	  etternavn: user.getProperty('etternavn'),
