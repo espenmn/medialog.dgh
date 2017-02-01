@@ -4,17 +4,43 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="medialog.dgh">
 <body>
-   <metal:content-core fill-slot="content-core"
-          tal:define="templateId template/getId">
-    <div id="medlemmer_listing" tal:repeat="user view/group_users">
-         
-       xxxx
+<metal:main fill-slot="content-core">
+  <p class="discreet">Klikk på tabellheadingen for å sortere</p> 
+  
+  <table class="sortable pat-tablesorter">
+    <thead>
+      <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innmeldingsår</th></tr>      
+    </thead>
+    <tbody>
+    <tr  tal:repeat="medlem view/group_users">
+           <td>${medlem/etternavn}</td>
+    
+           <td>${medlem/fornavn}</td>
+           <td>${medlem/tittel}</td>
+           <td>${medlem/group}</td>
+           <td>${medlem/innmeldingsar}</td>
                   
-    </div>
-</metal:content-core>
+    </tr>
+    </tbody>
+          
+  </table>
 
+<script type="text/javascript" src="http://cdn.ucb.org.br/Scripts/tablesorter/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="https://www.asvg.no/jquery.filtertable.js"></script>
+<script>
+$(function(){
+  $('table.sortable').tablesorter({ sortList: [[0,0], [1,0]] }); 
+});
+</script>
+
+
+<script>
+       $('table').filterTable(); //if this code appears after your tables; otherwise, include it in your document.ready() code.
+</script>
+
+</metal:main>
 </body>
 </html>
 

@@ -1,4 +1,10 @@
-from Products.Five.browser import BrowserView
+## -*- coding: utf-8 -*-
+
+from zope.interface import implements, Interface
+from plone.dexterity.utils import iterSchemata
+from zope.schema import getFields
+
+from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
@@ -14,26 +20,28 @@ class MedlemmerView(BrowserView):
     def all_users(self):
         return api.user.get_users()
         
+    @property
     def group_users(self):
         group = self.context.group or None
         usergroup = api.user.get_users(groupname=group)
         userlist = []
         
-        import pdb; pdb.set_trace()
-        for user in usergroup:
-            uuserdata = dict{
-              fullname: user.getProperty('fullname'),
-        	  fornavn: user.getProperty('fornavn'),
-        	  etternavn: user.getProperty('etternavn'),
-        	  tittel: user.getProperty('tittel'),
-        	  postnr: user.getProperty('postnr'),
-        	  postadr: user.getProperty('postadr'),
-        	  honnor: user.getProperty('honn_rmedlem'),
-        	  tittel: user.getProperty('innmeldingsar'),
-        	  telefon: user.getProperty('telefon'),
-        	  adresse: user.getProperty('adressse'),
-        	  utenbys: user.getProperty('utenbys'),
-        	  group:  api.group.get_groups(username=user)
-         	 }
-         	 userlist.append(userdata)
+        for member in usergroup:
+            group = api.group.get_groups(user=member)
+            grupper = ', '.join(str(e) for e in group[1:])
+            userlist.append(
+            {'etternavn': member.getProperty('etternavn'),
+              'fornavn': member.getProperty('fornavn'),
+              'tittel': member.getProperty('tittel'),
+              'postnr': member.getProperty('postnr'),
+              'poststed': member.getProperty('poststed'),
+              'honnor': member.getProperty('honn_rmedlem'),
+              'tittel': member.getProperty('innmeldingsar'),
+              'telefon': member.getProperty('telefon'),
+              'adresse': member.getProperty('adresse'),
+              'utenbys': member.getProperty('utenbys'),
+              'innmeldingsar': member.getProperty('innmeldingsar'),
+              'group': grupper,
+              })
+            
         return userlist
