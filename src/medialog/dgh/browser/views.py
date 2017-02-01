@@ -36,7 +36,6 @@ class MedlemmerView(BrowserView):
               'postnr': member.getProperty('postnr'),
               'poststed': member.getProperty('poststed'),
               'honnor': member.getProperty('honn_rmedlem'),
-              'tittel': member.getProperty('innmeldingsar'),
               'telefon': member.getProperty('telefon'),
               'adresse': member.getProperty('adresse'),
               'utenbys': member.getProperty('utenbys'),
