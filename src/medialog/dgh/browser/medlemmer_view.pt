@@ -11,7 +11,7 @@
   
   <table class="sortable pat-tablesorter">
     <thead>
-      <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innmeldingsår</th></tr>      
+      <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innmeldingsår</th><th>Merknad</th></tr>      
     </thead>
     <tbody>
     <tr  tal:repeat="medlem view/group_users">
@@ -21,6 +21,7 @@
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
+           <td><span tal:condition="not medlem/epost" class="red">Mangler epost</span> </td>
                   
     </tr>
     </tbody>
