@@ -21,7 +21,8 @@ class MedlemmerView(BrowserView):
         
         for user in usergroup:
         	userlist.append(
-        	 {fornavn: user.getProperty('fornavn'),
+        	 {fullname: user.getProperty('fullname'),
+        	  fornavn: user.getProperty('fornavn'),
         	  etternavn: user.getProperty('etternavn'),
         	  tittel: user.getProperty('tittel'),
         	  postnr: user.getProperty('postnr'),
