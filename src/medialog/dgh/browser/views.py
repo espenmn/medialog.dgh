@@ -16,7 +16,21 @@ class MedlemmerView(BrowserView):
         
     def group_users(self):
         group = self.context.group or None
-        return api.user.get_users(groupname=group)
+        usergroup = api.user.get_users(groupname=group)
+        userlist = []
         
-
-
+        for user in usergroup:
+        	userlist.append(
+        	 {fornavn: user.getProperty('fornavn'),
+        	  etternavn: user.getProperty('etternavn'),
+        	  tittel: user.getProperty('tittel'),
+        	  postnr: user.getProperty('postnr'),
+        	  postadr: user.getProperty('postadr'),
+        	  honnor: user.getProperty('honn_rmedlem'),
+        	  tittel: user.getProperty('innmeldingsar'),
+        	  telefon: user.getProperty('telefon'),
+        	  adresse: user.getProperty('adressse'),
+        	  utenbys: user.getProperty('utenbys'),
+        	  group:  api.group.get_groups(username=user)
+         	 })
+        return userlist
