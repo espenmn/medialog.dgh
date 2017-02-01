@@ -37,7 +37,7 @@ $(function(){
 
 
 <script>
-       $('table').filterTable(); //if this code appears after your tables; otherwise, include it in your document.ready() code.
+       $('table').filterTable();
 </script>
 
 </metal:main>
