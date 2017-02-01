@@ -20,6 +20,7 @@ class MedlemmerView(BrowserView):
         userlist = []
         
         for user in usergroup:
+            import pdb; pdb.set_trace()
         	userlist.append(
         	 {fullname: user.getProperty('fullname'),
         	  fornavn: user.getProperty('fornavn'),
