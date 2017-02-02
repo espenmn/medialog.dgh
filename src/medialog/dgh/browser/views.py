@@ -29,20 +29,21 @@ class MedlemmerView(BrowserView):
         for member in usergroup:
             group = api.group.get_groups(user=member)
             grupper = ', '.join(str(e) for e in group[1:])
-            userlist.append(
-            {'etternavn': member.getProperty('etternavn'),
-              'fornavn': member.getProperty('fornavn'),
-              'tittel': member.getProperty('tittel'),
-              'email' : member.getProperty('email'),
-              'postnr': member.getProperty('postnr'),
-              'poststed': member.getProperty('poststed'),
-              'honnor': member.getProperty('honn_rmedlem'),
-              'telefon': member.getProperty('telefon'),
-              'adresse': member.getProperty('adresse'),
-              'utenbys': member.getProperty('utenbys'),
-              'innmeldingsar': member.getProperty('innmeldingsar'),
-              'last_login': member.getProperty('last_login_time'),
-              'group': grupper,
-              })
+            if grupper != 'AuthenticatedUsers':
+                userlist.append(
+                {'etternavn': member.getProperty('etternavn'),
+                  'fornavn': member.getProperty('fornavn'),
+                  'tittel': member.getProperty('tittel'),
+                  'email' : member.getProperty('email'),
+                  'postnr': member.getProperty('postnr'),
+                  'poststed': member.getProperty('poststed'),
+                  'honnor': member.getProperty('honn_rmedlem'),
+                  'telefon': member.getProperty('telefon'),
+                  'adresse': member.getProperty('adresse'),
+                  'utenbys': member.getProperty('utenbys'),
+                  'innmeldingsar': member.getProperty('innmeldingsar'),
+                  'last_login': member.getProperty('last_login_time'),
+                  'group': grupper,
+                  })
             
         return userlist
