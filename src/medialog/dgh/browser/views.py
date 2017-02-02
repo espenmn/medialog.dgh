@@ -41,6 +41,7 @@ class MedlemmerView(BrowserView):
               'adresse': member.getProperty('adresse'),
               'utenbys': member.getProperty('utenbys'),
               'innmeldingsar': member.getProperty('innmeldingsar'),
+              'last_login': member.getProperty('last_login_time'),
               'group': grupper,
               })
             
