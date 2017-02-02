@@ -22,7 +22,7 @@ class MedlemmerView(BrowserView):
         
     @property
     def group_users(self):
-        group = self.context.group or 'member'
+        group = self.context.group or None
         usergroup = api.user.get_users(groupname=group)
         userlist = []
         
