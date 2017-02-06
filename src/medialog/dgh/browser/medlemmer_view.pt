@@ -20,7 +20,7 @@
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td><span tal:condition="python: medlem.verified">Uverifisert!</span></td>             
+           <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Uverifisert!</span></td>             
     </tr>
     </tbody>
           
