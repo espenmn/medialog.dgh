@@ -11,17 +11,16 @@
   
   <table class="sortable pat-tablesorter">
     <thead>
-      <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innmeldingsår</th><th>Merknad</th></tr>      
+      <tr><th>Ettern.</th><th>Forn.</th><th>Tit.</th><th>Klubb</th><th>Innmeldt</th><th>Merk</th></tr>      
     </thead>
     <tbody>
     <tr  tal:repeat="medlem view/group_users">
            <td>${medlem/etternavn}</td>
-    
            <td>${medlem/fornavn}</td>
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td></td>             
+           <td><span tal:condtion="medlem/verified">Uverifisert!</span></td>             
     </tr>
     </tbody>
           

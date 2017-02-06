@@ -42,8 +42,9 @@ class MedlemmerView(BrowserView):
                   'adresse': member.getProperty('adresse'),
                   'utenbys': member.getProperty('utenbys'),
                   'innmeldingsar': member.getProperty('innmeldingsar'),
-                  'last_login': member.getProperty('last_login_time'),
+                  'login_time': member.getProperty('login_time'),
                   'group': grupper,
+                  'verified': member.getProperty('login_time').strftime('%Y') != '2000': 
                   })
             
         return userlist
