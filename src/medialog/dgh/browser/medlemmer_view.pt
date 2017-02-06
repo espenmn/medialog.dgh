@@ -20,7 +20,7 @@
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td><span tal:condtion="medlem/verified">Uverifisert!</span></td>             
+           <td><span>Uverifisert!</span></td>             
     </tr>
     </tbody>
           
