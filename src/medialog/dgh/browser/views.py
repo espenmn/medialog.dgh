@@ -63,6 +63,6 @@ class GroupsEmail(BrowserView):
             group = api.group.get_groups(user=member)
             grupper = ', '.join(str(e) for e in group[1:])
             if grupper != 'AuthenticatedUsers':
-                userlist += member.getProperty('email')
+                maillist += member.getProperty('email')
             
-        return str(maillist)
+        return maillist
