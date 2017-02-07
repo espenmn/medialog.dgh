@@ -48,3 +48,21 @@ class MedlemmerView(BrowserView):
                   })
             
         return userlist
+        
+        
+class GroupsEmail(BrowserView):
+    """ get all email for a group
+    """
+
+    def call(self, context):
+        group = self.context.group or None
+        usergroup = api.user.get_users(groupname=group)
+        maillist = ''
+                
+        for member in usergroup:
+            group = api.group.get_groups(user=member)
+            grupper = ', '.join(str(e) for e in group[1:])
+            if grupper != 'AuthenticatedUsers':
+                userlist += member.getProperty('email')
+            
+        return maillist
