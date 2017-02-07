@@ -65,4 +65,4 @@ class GroupsEmail(BrowserView):
             if grupper != 'AuthenticatedUsers':
                 userlist += member.getProperty('email')
             
-        return maillist
+        return maillist()
