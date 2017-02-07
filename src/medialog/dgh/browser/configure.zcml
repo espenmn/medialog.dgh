@@ -26,4 +26,13 @@
         permission="zope2.View"
     />
 
+  <browser:page
+        name="groups_email"
+        for="*"
+        layer="medialog.dgh.interfaces.IMedialogDghLayer"
+        class="medialog.dgh.browser.views.GroupsEmail"
+        permission="zope2.View"
+    />
+
+
 </configure>
