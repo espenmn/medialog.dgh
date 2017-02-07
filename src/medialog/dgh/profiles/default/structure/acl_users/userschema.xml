@@ -1,0 +1,69 @@
+<model xmlns:easyform="http://namespaces.plone.org/supermodel/easyform" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:i18n="http://xml.zope.org/namespaces/i18n" xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:users="http://namespaces.plone.org/supermodel/users" xmlns="http://namespaces.plone.org/supermodel/schema" i18n:domain="plone">
+  <schema name="member-fields">
+    <field name="portrait" type="plone.namedfile.field.NamedBlobImage" users:forms="In User Profile">
+      <description i18n:translate="help_portrait">
+          To add or change the portrait: click the "Browse" button; select a picture of yourself. Recommended image size is 75 pixels wide by 100 pixels tall.
+      </description>
+      <required>False</required>
+      <title i18n:translate="label_portrait">Portrait</title>
+    </field>
+    <field name="tittel" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <required>False</required>
+      <title>Tittel</title>
+    </field>
+    <field name="telefon" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <required>False</required>
+      <title>Telefon</title>
+    </field>
+    <field name="adresse" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <title>Adresse</title>
+    </field>
+    <field name="etternavn" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <title>Etternavn</title>
+    </field>
+    <field name="fornavn" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <title>Fornavn</title>
+    </field>
+    <field name="poststed" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <required>False</required>
+      <title>Poststed</title>
+    </field>
+    <field name="postnr" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <required>False</required>
+      <title>Postnr</title>
+    </field>
+    <field name="innmeldingsar" type="zope.schema.Int" users:forms="On Registration|In User Profile">
+      <description/>
+      <max>2050</max>
+      <min>1940</min>
+      <required>False</required>
+      <title>Innmeldings&#229;r</title>
+    </field>
+    <field name="utenbys" type="zope.schema.Bool" users:forms="On Registration|In User Profile">
+      <description/>
+      <required>False</required>
+      <title>Utenbys</title>
+    </field>
+    <field name="honn_rmedlem" type="zope.schema.Bool" users:forms="On Registration|In User Profile">
+      <description/>
+      <title>Honn&#248;rmedlem</title>
+    </field>
+    <field name="location" type="zope.schema.TextLine">
+      <description/>
+      <required>False</required>
+      <title>location</title>
+    </field>
+    <field name="home_page" type="zope.schema.TextLine">
+      <description/>
+      <required>False</required>
+      <title>home_page</title>
+    </field>
+  </schema>
+</model>
