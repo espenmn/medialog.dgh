@@ -1,0 +1,93 @@
+<?xml version="1.0" ?>
+<zodb-groups title="" >
+ <group group_id="Administrators" title="Administrators" description="">
+ </group>
+ <group group_id="Bok" title="Bok" description="">
+  
+ </group>
+ <group group_id="Dgh" title="Dgh" description="">
+ </group>
+ <group group_id="Direksjonen" title="Direksjonen" description="">
+  
+ </group>
+ <group group_id="Drusan" title="Drusan" description="">
+  
+ </group>
+ <group group_id="Flax" title="Flax" description="">
+ </group>
+ <group group_id="Flintstone" title="Flintstone" description="">
+ </group>
+ <group group_id="Gambrinus" title="Gambrinus" description="">
+  
+ </group>
+ <group group_id="Gaudeamus" title="Gaudeamus" description="">
+  
+ </group>
+ <group group_id="Gunners" title="Gunners" description="">
+  
+ </group>
+ <group group_id="Heisan" title="Heisan" description="">
+  
+ </group>
+ <group group_id="HivaKalescha" title="Hiva Kalescha" description="">
+  
+ </group>
+ <group group_id="Hivan" title="Hivan" description="">
+  
+ </group>
+ <group group_id="Hr.Kules" title="Hr.Kules" description="">
+  
+ </group>
+ <group group_id="Jomfruen" title="Jomfruen" description="">
+  
+ </group>
+ <group group_id="Kjilan" title="Kjilan" description="">
+  
+ </group>
+ <group group_id="Kjilevinken" title="Kjilevinken" description="">
+ </group>
+ <group group_id="Klodrian" title="Klodrian" description="">
+  
+ </group>
+ <group group_id="Knektene" title="Knektene" description="">
+  
+ </group>
+ <group group_id="Kymbalon" title="Kymbalon" description="">
+  
+ </group>
+ <group group_id="Kyrre" title="Kyrre" description="">
+  
+ </group>
+ <group group_id="Laboremus" title="Laboremus" description="">
+  
+ </group>
+ <group group_id="Nulleren" title="Nulleren" description="">
+  
+ </group>
+ <group group_id="Paraplyen" title="Paraplyen" description="">
+  
+ </group>
+ <group group_id="Pepys" title="Pepys" description="">
+  
+ </group>
+ <group group_id="Representantskapet" title="Representantskapet" description="">
+  
+ </group>
+ <group group_id="Reviewers" title="Reviewers" description="">
+  
+ </group>
+ <group group_id="Site Administrators" title="Site Administrators" description="">
+ </group>
+ <group group_id="Slendrian" title="Slendrian" description="">
+  
+ </group>
+ <group group_id="Susan" title="Susan" description="">
+  
+ </group>
+ <group group_id="kingpins" title="King Pins" description="">
+  
+ </group>
+ <group group_id="ohlen" title="Oehlenschläger " description="">
+  
+ </group>
+</zodb-groups>
