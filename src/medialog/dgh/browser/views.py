@@ -97,7 +97,7 @@ class TestGroupsEmail(BrowserView):
     """
     
     def __init__(self, context, request):
-        super(Exporter, self).__init__(context, request)
+        super(TestGroupsEmail, self).__init__(context, request)
 
     def call(self, context):
         self.message = 'some text'
