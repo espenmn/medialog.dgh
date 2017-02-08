@@ -8,6 +8,10 @@ from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
+
+
+
+
 class MedlemmerView(BrowserView):
     """ View to show users
     """
@@ -51,18 +55,61 @@ class MedlemmerView(BrowserView):
         
         
 class GroupsEmail(BrowserView):
-    """ get all email for a group
+    """ send email to a group
     """
 
     def call(self, context):
-        group = self.context.group or None
+        group = context.group or None
         usergroup = api.user.get_users(groupname=group)
-        maillist = ''
-                
+        self.message = 'some text'
+        self.subject = "Email subject"
         for member in usergroup:
             group = api.group.get_groups(user=member)
             grupper = ', '.join(str(e) for e in group[1:])
-            if grupper != 'AuthenticatedUsers':
-                maillist += member.getProperty('email')
-            
-        return maillist
+            receipt = member.getProperty('email')
+            self.send_email(self, receipt) 
+        
+        
+    def send_email(self, receipt):
+        "Send email to user of this group"
+        try:
+    		mail_host = api.portal.get_tool(name='MailHost')
+    		# The ``immediate`` parameter causes an email to be sent immediately
+    		# (if any error is raised) rather than sent at the transaction
+    		# boundary or queued for later delivery.
+    		return mail_host.send(mail_text, immediate=True)
+		except SMTPRecipientsRefused:
+    		# Don't disclose email address on failure
+    		raise SMTPRecipientsRefused('Recipient address rejected by server')
+    		
+
+		# Use this logger to output debug info from this script if needed
+		#import logging
+		#logger = logging.getLogger("mailer-logger")
+
+		source = "admin@dgh.com"
+		
+		mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+		
+
+class TestGroupsEmail(BrowserView):
+    """ send email to a espen
+    """
+
+    def call(self, context):
+        self.message = 'some text'
+        self.subject = "Email subject"
+        try:
+    		mail_host = api.portal.get_tool(name='MailHost')
+    		# The ``immediate`` parameter causes an email to be sent immediately
+    		# (if any error is raised) rather than sent at the transaction
+    		# boundary or queued for later delivery.
+    		return mail_host.send(mail_text, immediate=True)
+		except SMTPRecipientsRefused:
+    		# Don't disclose email address on failure
+    		raise SMTPRecipientsRefused('Recipient address rejected by server')
+    		
+		source = "admin@dgh.com"
+		receip = "espen@medialog.no"
+		
+		mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )

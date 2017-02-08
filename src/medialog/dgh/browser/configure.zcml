@@ -35,4 +35,12 @@
     />
 
 
+  <browser:page
+        name="test_groups_email"
+        for="*"
+        layer="medialog.dgh.interfaces.IMedialogDghLayer"
+        class="medialog.dgh.browser.views.TestGroupsEmail"
+        permission="zope2.View"
+    />
+
 </configure>
