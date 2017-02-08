@@ -109,15 +109,14 @@ class TestGroupsEmail(BrowserView):
             # boundary or queued for later delivery.
             return mail_host.send(mail_text, immediate=True)
             
-        	source = "admin@dgh.com"
-        	receipt = "espen@medialog.no"
+            source = "admin@dgh.com"
+            receipt = "espen@medialog.no"
         
-        	mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
-        	return "Testmail snt"
+            mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+            return "Testmail snt"
         
         except SMTPRecipientsRefused:
             # Don't disclose email address on failure
             raise SMTPRecipientsRefused('Recipient address rejected by server')
-        
-        return 'Something wrong happened'
+            return 'Something wrong happened'
     
