@@ -77,10 +77,8 @@ class GroupsEmail(BrowserView):
             # The ``immediate`` parameter causes an email to be sent immediately
             # (if any error is raised) rather than sent at the transaction
             # boundary or queued for later delivery.
-            return mail_host.send(mail_text, immediate=True)
-        except SMTPRecipientsRefused:
-            # Don't disclose email address on failure
-            raise SMTPRecipientsRefused('Recipient address rejected by server')
+        except:
+            return 'Something wrong happened'
             
 
         # Use this logger to output debug info from this script if needed
@@ -108,7 +106,6 @@ class TestGroupsEmail(BrowserView):
             # The ``immediate`` parameter causes an email to be sent immediately
             # (if any error is raised) rather than sent at the transaction
             # boundary or queued for later delivery.
-            return mail_host.send(mail_text, immediate=True)
             
             source = "admin@dgh.com"
             receipt = "espen@medialog.no"
