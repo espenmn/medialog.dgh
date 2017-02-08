@@ -99,7 +99,7 @@ class XTestGroupsEmail(BrowserView):
             source = "admin@dgh.no"
             receipt = "espen@medialog.no"
         
-            mailhost.send(message, subtype='html', receipt, source, subject=subject, charset="utf-8", )
+            #mailhost.send(message, subtype='html', receipt, source, subject=subject, charset="utf-8", )
             return "Testmail sent"
         
         except:
