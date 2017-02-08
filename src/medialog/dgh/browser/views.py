@@ -99,7 +99,7 @@ class XTestGroupsEmail(BrowserView):
             source = "admin@dgh.no"
             receipt = "espen@medialog.no"
         
-            mailhost.send(message,  _subtype='html', receipt, source, subject=subject, charset="utf-8", )
+            mailhost.send(message, subtype='html', receipt, source, subject=subject, charset="utf-8", )
             return "Testmail sent"
         
         except:
@@ -112,11 +112,11 @@ class TestGroupsEmail(BrowserView):
     """ send email to a espen
     """
     
-    def __call__(self):
-        e_subject = self.context.Title
+    def __call__(self, context):
+        e_subject = context.Title
         e_from = u'admin@dgh'
         e_to = u'espen@medialog.no'
-        body_html = u'<html>provsprängningen <em>av</em> kärnvapen</html>'
+        body_html = u'<html>' + self.context.output + u'</html>'
         body_plain = u'provsprängningen *av* kärnvapen'
 
         mime_msg = MIMEMultipart('related')
