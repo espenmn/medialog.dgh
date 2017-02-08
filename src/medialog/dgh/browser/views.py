@@ -92,7 +92,7 @@ class TestGroupsEmail(BrowserView):
     #    super(TestGroupsEmail, self).__init__(context, request)
 
     def __call__(self):
-        message = "<html>" + self.context.text.output + '</html>
+        message = "<html>" + self.context.text.output + '</html>'
         subject = "Email subject"
         try:
             mailhost = api.portal.get_tool(name='MailHost')
