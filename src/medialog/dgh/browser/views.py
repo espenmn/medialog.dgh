@@ -56,6 +56,7 @@ class GroupsEmail(BrowserView):
     """
 
     def __call__(self, context):
+        import pdb; pdb.set_trace()
         group = context.group or None
         usergroup = api.user.get_users(groupname=group)
         self.message = self.context.text.output
@@ -74,9 +75,9 @@ class GroupsEmail(BrowserView):
             # Use this logger to output debug info from this script if needed
             #import logging
             #logger = logging.getLogger("mailer-logger")
-            #source = "admin@dgh.no"
+            source = "admin@dgh.no"
         
-            mailhost.send(self.message, receipt, subject=self.subject, charset="utf-8", )
+            mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
         
         except:
             return 'Something wrong happened'
@@ -91,7 +92,7 @@ class TestGroupsEmail(BrowserView):
     #    super(TestGroupsEmail, self).__init__(context, request)
 
     def __call__(self):
-        message = self.context.text.output
+        message = "<html>" + self.context.text.output + '</html>
         subject = "Email subject"
         try:
             mailhost = api.portal.get_tool(name='MailHost')
