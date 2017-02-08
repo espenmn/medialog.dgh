@@ -113,6 +113,7 @@ class TestGroupsEmail(BrowserView):
     """
     
     def __call__(self, context):
+        import pdb; pdb.set_trace()
         e_subject = context.Title
         e_from = u'admin@dgh'
         e_to = u'espen@medialog.no'
