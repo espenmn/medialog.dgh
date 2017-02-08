@@ -84,7 +84,7 @@ class GroupsEmail(BrowserView):
             
         
 
-class TestGroupsEmail(BrowserView):
+class XTestGroupsEmail(BrowserView):
     """ send email to a espen
     """
     
@@ -99,9 +99,51 @@ class TestGroupsEmail(BrowserView):
             source = "admin@dgh.no"
             receipt = "espen@medialog.no"
         
-            mailhost.send(message, receipt, source, subject=subject, charset="utf-8", )
+            mailhost.send(message,  _subtype='html', receipt, source, subject=subject, charset="utf-8", )
             return "Testmail sent"
         
         except:
             return 'Something wrong happened'
+            
+            
+            
+            
+class TestGroupsEmail(BrowserView):
+    """ send email to a espen
+    """
+    
+   def __call__(self):
+		e_subject = self.context.Title
+		e_from = u'admin@dgh'
+		e_to = u'espen@medialog.no'
+		body_html = u'<html>provsprängningen <em>av</em> kärnvapen</html>'
+		body_plain = u'provsprängningen *av* kärnvapen'
+
+		mime_msg = MIMEMultipart('related')
+		mime_msg['Subject'] = e_subject
+		mime_msg['From'] = e_from
+		mime_msg['To'] = e_to
+		mime_msg.preamble = 'This is a multi-part message in MIME format.'
+
+		# Encapsulate the plain and HTML versions of the message body 
+		# in an 'alternative' part, so message agents can decide 
+		# which they want to display.
+		msgAlternative = MIMEMultipart('alternative')
+		mime_msg.attach(msgAlternative)
+
+		# plain part
+		msg_txt = MIMEText(body,  _charset='iso-8859-1')
+		msgAlternative.attach(msg_txt)
+
+		# html part
+		msg_txt = MIMEText(rendered_html, _subtype='html', 
+						   _charset='utf-8')
+		msgAlternative.attach(msg_txt)
+
+		try:
+            mailhost.send(mime_msg.as_string())
+			return "Testmail sent"
+        
+        except:
+            return 'Something wrong happened'       
     
