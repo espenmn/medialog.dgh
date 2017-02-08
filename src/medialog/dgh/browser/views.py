@@ -77,17 +77,18 @@ class GroupsEmail(BrowserView):
             # The ``immediate`` parameter causes an email to be sent immediately
             # (if any error is raised) rather than sent at the transaction
             # boundary or queued for later delivery.
+
+            # Use this logger to output debug info from this script if needed
+            #import logging
+            #logger = logging.getLogger("mailer-logger")
+
+            source = "admin@dgh.com"
+        
+            mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+        
         except:
             return 'Something wrong happened'
             
-
-        # Use this logger to output debug info from this script if needed
-        #import logging
-        #logger = logging.getLogger("mailer-logger")
-
-        source = "admin@dgh.com"
-        
-        mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
         
 
 class TestGroupsEmail(BrowserView):
@@ -98,7 +99,6 @@ class TestGroupsEmail(BrowserView):
     #    super(TestGroupsEmail, self).__init__(context, request)
 
     def __call__(self):
-        import pdb; pdb.set_trace()
         self.message = 'some text'
         self.subject = "Email subject"
         try:
