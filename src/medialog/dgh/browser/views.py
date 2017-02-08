@@ -71,7 +71,7 @@ class GroupsEmail(BrowserView):
     def send_email(self, receipt):
         "Send email to user of this group"
         try:
-            mail_host = api.portal.get_tool(name='MailHost')
+            mailhost = api.portal.get_tool(name='MailHost')
             # The ``immediate`` parameter causes an email to be sent immediately
             # (if any error is raised) rather than sent at the transaction
             # boundary or queued for later delivery.
@@ -101,7 +101,7 @@ class TestGroupsEmail(BrowserView):
         subject = "Email subject"
         import pdb; pdb.set_trace()
         try:
-            mail_host = api.portal.get_tool(name='MailHost')
+            mailhost = api.portal.get_tool(name='MailHost')
             # The ``immediate`` parameter causes an email to be sent immediately
             # (if any error is raised) rather than sent at the transaction
             # boundary or queued for later delivery.
