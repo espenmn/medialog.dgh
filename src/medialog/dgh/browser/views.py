@@ -56,10 +56,9 @@ class GroupsEmail(BrowserView):
     """
 
     def __call__(self, context):
-        import pdb; pdb.set_trace()
         group = context.group or None
         usergroup = api.user.get_users(groupname=group)
-        self.message = 'some text'
+        self.message = self.context.text.output
         self.subject = "Email subject"
         for member in usergroup:
             group = api.group.get_groups(user=member)
@@ -72,15 +71,10 @@ class GroupsEmail(BrowserView):
         "Send email to user of this group"
         try:
             mailhost = api.portal.get_tool(name='MailHost')
-            # The ``immediate`` parameter causes an email to be sent immediately
-            # (if any error is raised) rather than sent at the transaction
-            # boundary or queued for later delivery.
-
             # Use this logger to output debug info from this script if needed
             #import logging
             #logger = logging.getLogger("mailer-logger")
-
-            #source = "admin@dgh.com"
+            #source = "admin@dgh.no"
         
             mailhost.send(self.message, receipt, subject=self.subject, charset="utf-8", )
         
@@ -97,23 +91,16 @@ class TestGroupsEmail(BrowserView):
     #    super(TestGroupsEmail, self).__init__(context, request)
 
     def __call__(self):
-        message = 'some text'
+        message = self.context.text.output
         subject = "Email subject"
-        import pdb; pdb.set_trace()
         try:
             mailhost = api.portal.get_tool(name='MailHost')
-            # The ``immediate`` parameter causes an email to be sent immediately
-            # (if any error is raised) rather than sent at the transaction
-            # boundary or queued for later delivery.
-            
             source = "admin@dgh.no"
             receipt = "espen@medialog.no"
         
             mailhost.send(message, receipt, source, subject=subject, charset="utf-8", )
-            return "Testmail snt"
+            return "Testmail sent"
         
         except:
-            # Don't disclose email address on failure
-            #raise SMTPRecipientsRefused('Recipient address rejected by server')
             return 'Something wrong happened'
     
