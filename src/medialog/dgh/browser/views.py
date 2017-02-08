@@ -80,9 +80,9 @@ class GroupsEmail(BrowserView):
             #import logging
             #logger = logging.getLogger("mailer-logger")
 
-            source = "admin@dgh.com"
+            #source = "admin@dgh.com"
         
-            mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+            mailhost.send(self.message, receipt, subject=self.subject, charset="utf-8", )
         
         except:
             return 'Something wrong happened'
@@ -106,10 +106,10 @@ class TestGroupsEmail(BrowserView):
             # (if any error is raised) rather than sent at the transaction
             # boundary or queued for later delivery.
             
-            source = "admin@dgh.com"
+            source = "admin@dgh.no"
             receipt = "espen@medialog.no"
         
-            mailhost.send(message=message, receipt=receipt, source=source, subject=subject, charset="utf-8", )
+            mailhost.send(message, receipt, source, subject=subject, charset="utf-8", )
             return "Testmail snt"
         
         except:
