@@ -9,9 +9,6 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
 
-
-
-
 class MedlemmerView(BrowserView):
     """ View to show users
     """
@@ -59,6 +56,7 @@ class GroupsEmail(BrowserView):
     """
 
     def __call__(self, context):
+        import pdb; pdb.set_trace()
         group = context.group or None
         usergroup = api.user.get_users(groupname=group)
         self.message = 'some text'
