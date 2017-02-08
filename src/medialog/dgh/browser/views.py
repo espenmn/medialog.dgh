@@ -116,8 +116,8 @@ class TestGroupsEmail(BrowserView):
             mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
             return "Testmail snt"
         
-        except SMTPRecipientsRefused:
+        except:
             # Don't disclose email address on failure
-            raise SMTPRecipientsRefused('Recipient address rejected by server')
+            #raise SMTPRecipientsRefused('Recipient address rejected by server')
             return 'Something wrong happened'
     
