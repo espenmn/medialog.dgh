@@ -97,8 +97,9 @@ class TestGroupsEmail(BrowserView):
     #    super(TestGroupsEmail, self).__init__(context, request)
 
     def __call__(self):
-        self.message = 'some text'
-        self.subject = "Email subject"
+        message = 'some text'
+        subject = "Email subject"
+        import pdb; pdb.set_trace()
         try:
             mail_host = api.portal.get_tool(name='MailHost')
             # The ``immediate`` parameter causes an email to be sent immediately
@@ -108,7 +109,7 @@ class TestGroupsEmail(BrowserView):
             source = "admin@dgh.com"
             receipt = "espen@medialog.no"
         
-            mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+            mailhost.send(message=message, receipt=receipt, source=source, subject=subject, charset="utf-8", )
             return "Testmail snt"
         
         except:
