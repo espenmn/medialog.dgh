@@ -8,6 +8,38 @@ from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
+# -*- coding: UTF-8 -*-
+from Acquisition import aq_inner
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+from OFS.SimpleItem import SimpleItem
+from plone.app.contentrules.actions import ActionAddForm
+from plone.app.contentrules.actions import ActionEditForm
+from plone.app.contentrules.browser.formhelper import ContentRuleFormWrapper
+from plone.app.z3cform.widget import SelectWidget
+from plone.autoform import directives
+from plone.contentrules.rule.interfaces import IExecutable
+from plone.contentrules.rule.interfaces import IRuleElementData
+from plone.registry.interfaces import IRegistry
+from plone.stringinterp.interfaces import IStringInterpolator
+from Products.CMFCore.utils import getToolByName
+from Products.CMFPlone import PloneMessageFactory as _
+from Products.CMFPlone.interfaces import IMailSchema
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from Products.statusmessages.interfaces import IStatusMessage
+from zope import schema
+from zope.component import adapter
+from zope.component import getUtility
+from zope.component.interfaces import ComponentLookupError
+from zope.globalrequest import getRequest
+from zope.interface import implementer
+from zope.interface import Interface
+
+import logging
+
+logger = logging.getLogger(__file__)
+
+
 
 class MedlemmerView(BrowserView):
     """ View to show users
@@ -112,13 +144,14 @@ class TestGroupsEmail(BrowserView):
     """ send email to a espen
     """
     
-    def __call__(self, context):
+    def __call__(self):
         import pdb; pdb.set_trace()
+        context = self.context
         e_subject = context.Title
         e_from = u'admin@dgh'
         e_to = u'espen@medialog.no'
-        body_html = u'<html>' + context.text.output + u'</html>'
-        body_plain = context.text.raw
+        body_html = u'<html> context.text.output </html>'
+        body_plain = u'context.text.raw'
 
         mime_msg = MIMEMultipart('related')
         mime_msg['Subject'] = e_subject
@@ -133,16 +166,19 @@ class TestGroupsEmail(BrowserView):
         mime_msg.attach(msgAlternative)
 
         # plain part
-        msg_txt = MIMEText(body,  _charset='utf-8')
+        msg_txt = MIMEText(body_plain,  _charset='utf-8')
         msgAlternative.attach(msg_txt)
 
         # html part
-        msg_txt = MIMEText(rendered_html, _subtype='html', 
+        msg_txt = MIMEText(body_html, _subtype='html', 
                            _charset='utf-8')
         msgAlternative.attach(msg_txt)
+        
+        mimems = mime_msg()
 
         try:
-            mailhost.send(mime_msg.as_string())
+            mailhost = api.portal.get_tool(name='MailHost')
+            mailhost.send(mimems.as_string())
             return "Testmail sent"
         
         except:
