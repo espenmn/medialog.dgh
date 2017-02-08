@@ -116,8 +116,8 @@ class TestGroupsEmail(BrowserView):
         e_subject = context.Title
         e_from = u'admin@dgh'
         e_to = u'espen@medialog.no'
-        body_html = u'<html>' + self.context.output + u'</html>'
-        body_plain = u'provsprängningen *av* kärnvapen'
+        body_html = u'<html>' + context.text.output + u'</html>'
+        body_plain = context.text.raw
 
         mime_msg = MIMEMultipart('related')
         mime_msg['Subject'] = e_subject
@@ -132,7 +132,7 @@ class TestGroupsEmail(BrowserView):
         mime_msg.attach(msgAlternative)
 
         # plain part
-        msg_txt = MIMEText(body,  _charset='iso-8859-1')
+        msg_txt = MIMEText(body,  _charset='utf-8')
         msgAlternative.attach(msg_txt)
 
         # html part
