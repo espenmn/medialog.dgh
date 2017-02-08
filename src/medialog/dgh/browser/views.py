@@ -58,7 +58,7 @@ class GroupsEmail(BrowserView):
     """ send email to a group
     """
 
-    def call(self, context):
+    def __call__(self, context):
         group = context.group or None
         usergroup = api.user.get_users(groupname=group)
         self.message = 'some text'
@@ -96,8 +96,8 @@ class TestGroupsEmail(BrowserView):
     """ send email to a espen
     """
     
-    def __init__(self, context, request):
-        super(TestGroupsEmail, self).__init__(context, request)
+    #def __init__(self, context, request):
+    #    super(TestGroupsEmail, self).__init__(context, request)
 
     def __call__(self, context, request):
         import pdb; pdb.set_trace()
