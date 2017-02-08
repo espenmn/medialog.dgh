@@ -99,7 +99,7 @@ class TestGroupsEmail(BrowserView):
     def __init__(self, context, request):
         super(TestGroupsEmail, self).__init__(context, request)
 
-    def call(self, context, request):
+    def __call__(self, context, request):
         import pdb; pdb.set_trace()
         self.message = 'some text'
         self.subject = "Email subject"
