@@ -73,24 +73,24 @@ class GroupsEmail(BrowserView):
     def send_email(self, receipt):
         "Send email to user of this group"
         try:
-    		mail_host = api.portal.get_tool(name='MailHost')
-    		# The ``immediate`` parameter causes an email to be sent immediately
-    		# (if any error is raised) rather than sent at the transaction
-    		# boundary or queued for later delivery.
-    		return mail_host.send(mail_text, immediate=True)
-		except SMTPRecipientsRefused:
-    		# Don't disclose email address on failure
-    		raise SMTPRecipientsRefused('Recipient address rejected by server')
-    		
+            mail_host = api.portal.get_tool(name='MailHost')
+            # The ``immediate`` parameter causes an email to be sent immediately
+            # (if any error is raised) rather than sent at the transaction
+            # boundary or queued for later delivery.
+            return mail_host.send(mail_text, immediate=True)
+        except SMTPRecipientsRefused:
+            # Don't disclose email address on failure
+            raise SMTPRecipientsRefused('Recipient address rejected by server')
+            
 
-		# Use this logger to output debug info from this script if needed
-		#import logging
-		#logger = logging.getLogger("mailer-logger")
+        # Use this logger to output debug info from this script if needed
+        #import logging
+        #logger = logging.getLogger("mailer-logger")
 
-		source = "admin@dgh.com"
-		
-		mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
-		
+        source = "admin@dgh.com"
+        
+        mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+        
 
 class TestGroupsEmail(BrowserView):
     """ send email to a espen
@@ -100,16 +100,16 @@ class TestGroupsEmail(BrowserView):
         self.message = 'some text'
         self.subject = "Email subject"
         try:
-    		mail_host = api.portal.get_tool(name='MailHost')
-    		# The ``immediate`` parameter causes an email to be sent immediately
-    		# (if any error is raised) rather than sent at the transaction
-    		# boundary or queued for later delivery.
-    		return mail_host.send(mail_text, immediate=True)
-		except SMTPRecipientsRefused:
-    		# Don't disclose email address on failure
-    		raise SMTPRecipientsRefused('Recipient address rejected by server')
-    		
-		source = "admin@dgh.com"
-		receip = "espen@medialog.no"
-		
-		mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
+            mail_host = api.portal.get_tool(name='MailHost')
+            # The ``immediate`` parameter causes an email to be sent immediately
+            # (if any error is raised) rather than sent at the transaction
+            # boundary or queued for later delivery.
+            return mail_host.send(mail_text, immediate=True)
+        except SMTPRecipientsRefused:
+            # Don't disclose email address on failure
+            raise SMTPRecipientsRefused('Recipient address rejected by server')
+            
+        source = "admin@dgh.com"
+        receip = "espen@medialog.no"
+        
+        mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
