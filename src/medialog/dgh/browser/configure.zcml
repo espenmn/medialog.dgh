@@ -31,15 +31,15 @@
         for="*"
         layer="medialog.dgh.interfaces.IMedialogDghLayer"
         class="medialog.dgh.browser.views.GroupsEmail"
-        permission="zope2.View"
+        permission="cmf.ManagePortal"
     />
 
-
   <browser:page
-        name="test_groups_email"
+        name="send_testmail"
         for="*"
         layer="medialog.dgh.interfaces.IMedialogDghLayer"
-        class="medialog.dgh.browser.views.TestGroupsEmail"
+        class="medialog.dgh.browser.views.GroupsEmail"
+        attribute="sendt_testmail"
         permission="zope2.View"
     />
 

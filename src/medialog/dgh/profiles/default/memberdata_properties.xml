@@ -12,15 +12,15 @@
  <property name="wysiwyg_editor" type="string"></property>
  <property name="visible_ids" type="boolean">False</property>
  <property name="tittel" type="string"></property>
+ <property name="fornavn" type="string"></property>
  <property name="etternavn" type="string"></property>
- <property name="postnr" type="string"></property>
  <property name="adresse" type="string"></property>
- <property name="utenbys" type="boolean">False</property>
+ <property name="postnr" type="string"></property>
+ <property name="poststed" type="string"></property>
+<property name="utenbys" type="boolean">False</property>
  <property name="honn_rmedlem" type="boolean">False</property>
  <property name="telefon" type="string"></property>
  <property name="home_page" type="string"></property>
- <property name="poststed" type="string"></property>
  <property name="location" type="string"></property>
- <property name="fornavn" type="string"></property>
  <property name="innmeldingsar" type="int">0</property>
 </object>

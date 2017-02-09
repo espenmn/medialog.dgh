@@ -8,32 +8,10 @@ from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api
 
-# -*- coding: UTF-8 -*-
-from Acquisition import aq_inner
-from email.MIMEMultipart import MIMEMultipart
-from email.MIMEText import MIMEText
-from OFS.SimpleItem import SimpleItem
-from plone.app.contentrules.actions import ActionAddForm
-from plone.app.contentrules.actions import ActionEditForm
-from plone.app.contentrules.browser.formhelper import ContentRuleFormWrapper
-from plone.app.z3cform.widget import SelectWidget
-from plone.autoform import directives
-from plone.contentrules.rule.interfaces import IExecutable
-from plone.contentrules.rule.interfaces import IRuleElementData
-from plone.registry.interfaces import IRegistry
-from plone.stringinterp.interfaces import IStringInterpolator
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _
 from Products.CMFPlone.interfaces import IMailSchema
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.statusmessages.interfaces import IStatusMessage
-from zope import schema
-from zope.component import adapter
-from zope.component import getUtility
-from zope.component.interfaces import ComponentLookupError
-from zope.globalrequest import getRequest
-from zope.interface import implementer
-from zope.interface import Interface
 
 import logging
 
@@ -84,103 +62,68 @@ class MedlemmerView(BrowserView):
         
         
 class GroupsEmail(BrowserView):
-    """ send email to a group
-    """
+    """ send email to everyone in a group  """
 
     def __call__(self, context):
-        import pdb; pdb.set_trace()
+        self.send_groupmail()
+        
+    def send_groupmail(self):
         group = context.group or None
         usergroup = api.user.get_users(groupname=group)
-        self.message = self.context.text.output
-        self.subject = "Email subject"
         for member in usergroup:
             group = api.group.get_groups(user=member)
-            grupper = ', '.join(str(e) for e in group[1:])
             receipt = member.getProperty('email')
-            self.send_email(self, receipt) 
-        
-        
+            self.send_email(receipt)
+            
+
     def send_email(self, receipt):
-        "Send email to user of this group"
-        try:
-            mailhost = api.portal.get_tool(name='MailHost')
-            # Use this logger to output debug info from this script if needed
-            #import logging
-            #logger = logging.getLogger("mailer-logger")
-            source = "admin@dgh.no"
-        
-            mailhost.send(self.message, receipt, source, subject=self.subject, charset="utf-8", )
-        
-        except:
-            return 'Something wrong happened'
-            
-        
-
-class XTestGroupsEmail(BrowserView):
-    """ send email to a espen
-    """
-    
-    #def __init__(self, context, request):
-    #    super(TestGroupsEmail, self).__init__(context, request)
-
-    def __call__(self):
-        message = "<html>" + self.context.text.output + '</html>'
-        subject = "Email subject"
-        try:
-            mailhost = api.portal.get_tool(name='MailHost')
-            source = "admin@dgh.no"
-            receipt = "espen@medialog.no"
-        
-            #mailhost.send(message, subtype='html', receipt, source, subject=subject, charset="utf-8", )
-            return "Testmail sent"
-        
-        except:
-            return 'Something wrong happened'
-            
-            
-            
-            
-class TestGroupsEmail(BrowserView):
-    """ send email to a espen
-    """
-    
-    def __call__(self):
-        import pdb; pdb.set_trace()
         context = self.context
-        e_subject = context.Title
-        e_from = u'admin@dgh'
-        e_to = u'espen@medialog.no'
-        body_html = u'<html> context.text.output </html>'
-        body_plain = u'context.text.raw'
+        title = context.title
+        description = context.description
 
-        mime_msg = MIMEMultipart('related')
-        mime_msg['Subject'] = e_subject
-        mime_msg['From'] = e_from
-        mime_msg['To'] = e_to
-        mime_msg.preamble = 'This is a multi-part message in MIME format.'
-
-        # Encapsulate the plain and HTML versions of the message body 
-        # in an 'alternative' part, so message agents can decide 
-        # which they want to display.
-        msgAlternative = MIMEMultipart('alternative')
-        mime_msg.attach(msgAlternative)
-
-        # plain part
-        msg_txt = MIMEText(body_plain,  _charset='utf-8')
-        msgAlternative.attach(msg_txt)
-
-        # html part
-        msg_txt = MIMEText(body_html, _subtype='html', 
-                           _charset='utf-8')
-        msgAlternative.attach(msg_txt)
+        body_html =  u'<h1 class="documentFirstHeading">' + title + u'</h1><div class="documentDescription description">' + description + u'</div>' + context.text.output   
         
-        mimems = mime_msg()
+        transforms = getToolByName(self.context, 'portal_transforms')
+        stream = transforms.convertTo('text/plain', body_html, mimetype='text/html')
+        body_plain = stream.getData().strip()
 
+        #body_plain = u''
+   
+        # create multipart mail
         try:
             mailhost = api.portal.get_tool(name='MailHost')
-            mailhost.send(mimems.as_string())
-            return "Testmail sent"
-        
+            outer = MIMEMultipart('alternative')
+            outer['To'] = receipt 
+            #Header(u'<%s>' % safe_unicode(receiver['email']))
+            outer['From'] = 'admin@dgh.no'
+            outer['Subject'] = title
+            outer.epilogue = ''
+
+            # Attach text part
+            text_part = MIMEText(body_plain, 'plain', _charset='UTF-8')
+
+            # Attach html part with images
+            html_part = MIMEMultipart('related')
+            html_text = MIMEText(body_html, 'html', _charset='UTF-8')
+            html_part.attach(html_text)
+
+            # Add images to the message
+            #for image in issue_data['images_to_attach']:
+            #    html_part.attach(image)
+            outer.attach(text_part)
+            outer.attach(html_part)
+
+            mailhost.send(outer.as_string())
+            
+            return True
+
         except:
-            return 'Something wrong happened'       
+            return 'Something went wrong'       
+            
+            
+    def sendt_testmail(self):
+        receipt = 'espen@medialog.no'
+        self.send_email(receipt)
+        
+            
     
