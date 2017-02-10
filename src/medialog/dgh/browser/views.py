@@ -34,8 +34,9 @@ class MedlemmerView(BrowserView):
     def all_users(self):
         return api.user.get_users()
         
+    @property
     def group_users(self):
-        group = self.context.groups or None
+        group = self.context.group or None
         usergroup = api.user.get_users(groupname=group)
         userlist = []
         
