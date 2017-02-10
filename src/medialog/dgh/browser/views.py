@@ -1,5 +1,4 @@
 ## -*- coding: utf-8 -*-
-
 from zope.interface import implements, Interface
 from plone.dexterity.utils import iterSchemata
 from zope.schema import getFields
@@ -11,6 +10,10 @@ from plone import api
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _
 from Products.CMFPlone.interfaces import IMailSchema
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEText import MIMEText
+from Products.statusmessages.interfaces import IStatusMessage
+
 from Products.statusmessages.interfaces import IStatusMessage
 
 import logging
@@ -33,7 +36,7 @@ class MedlemmerView(BrowserView):
         
     @property
     def group_users(self):
-        group = self.context.group or None
+        group = self.context.groups or None
         usergroup = api.user.get_users(groupname=group)
         userlist = []
         
@@ -65,37 +68,45 @@ class GroupsEmail(BrowserView):
     """ send email to everyone in a group  """
 
     def __call__(self, context):
-        self.send_groupmail()
-        
+        pass
+
     def send_groupmail(self):
-        group = context.group or None
-        usergroup = api.user.get_users(groupname=group)
+        context = self.context
+        request = self.request
+        if hasattr(context, 'group'):
+            group = context.group
+            usergroup = api.user.get_users(groupname=group)
+        else:
+            usergroup = api.user.get_users()
+        
         for member in usergroup:
             group = api.group.get_groups(user=member)
             receipt = member.getProperty('email')
-            self.send_email(receipt)
+            self.send_email(context, request, receipt)
+        
+        self.request.response.redirect(self.context.absolute_url())
             
 
-    def send_email(self, receipt):
-        context = self.context
-        title = context.title
-        description = context.description
-
-        body_html =  u'<h1 class="documentFirstHeading">' + title + u'</h1><div class="documentDescription description">' + description + u'</div>' + context.text.output   
+    def send_email(self, context, request, receipt):
+        title = context.Title()
+        description = context.Description()
+        body_html =  u'<html><div class="mailcontent"><h1 class="documentFirstHeading">' + title + u'</h1><div class="documentDescription description">' + description + u'</div>' + context.text.output + u'</div></html>'
         
-        transforms = getToolByName(self.context, 'portal_transforms')
+        #for 'non HTML mail clients'
+        transforms = api.portal.get_tool(name='portal_transforms')
         stream = transforms.convertTo('text/plain', body_html, mimetype='text/html')
         body_plain = stream.getData().strip()
 
-        #body_plain = u''
+        messages = IStatusMessage(self.request)
    
-        # create multipart mail
+        # ready to create multipart mail
         try:
             mailhost = api.portal.get_tool(name='MailHost')
+            # discovered that plone api might do this better
+            # plone.api.portal.send_email , maybe
             outer = MIMEMultipart('alternative')
             outer['To'] = receipt 
-            #Header(u'<%s>' % safe_unicode(receiver['email']))
-            outer['From'] = 'admin@dgh.no'
+            outer['From'] = api.portal.get_registry_record('plone.email_from_address')
             outer['Subject'] = title
             outer.epilogue = ''
 
@@ -115,15 +126,22 @@ class GroupsEmail(BrowserView):
 
             mailhost.send(outer.as_string())
             
-            return True
+            messages.add(_("sent_mail_message",  default=u"Sendt til $email",
+                                                 mapping={'email': receipt },
+                                                 ),
+                                                 type="info")  
 
         except:
-            return 'Something went wrong'       
+            messages.add(_("cant_send_mail_message",
+                                                 default=u"Kunne ikke sende til $email",
+                                                 mapping={'email': receipt },
+                                                 ),
+                                                 type="warning")    
             
             
     def sendt_testmail(self):
+        con  = self.context
+        request = self.request
         receipt = 'espen@medialog.no'
-        self.send_email(receipt)
-        
-            
-    
+        self.send_email(context, request, receipt)
+        self.request.response.redirect(self.context.absolute_url())

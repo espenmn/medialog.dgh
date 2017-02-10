@@ -17,10 +17,6 @@
       <required>False</required>
       <title>Telefon</title>
     </field>
-    <field name="adresse" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
-      <description/>
-      <title>Adresse</title>
-    </field>
     <field name="etternavn" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
       <description/>
       <title>Etternavn</title>
@@ -29,15 +25,19 @@
       <description/>
       <title>Fornavn</title>
     </field>
-    <field name="poststed" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+    <field name="adresse" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
       <description/>
-      <required>False</required>
-      <title>Poststed</title>
+      <title>Adresse</title>
     </field>
     <field name="postnr" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
       <description/>
       <required>False</required>
       <title>Postnr</title>
+    </field>
+    <field name="poststed" type="zope.schema.TextLine" users:forms="On Registration|In User Profile">
+      <description/>
+      <required>False</required>
+      <title>Poststed</title>
     </field>
     <field name="innmeldingsar" type="zope.schema.Int" users:forms="On Registration|In User Profile">
       <description/>

@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<zodb-users>
+ <user user_id="birte-mari-taule" login_name="birte@dgh.no" password_hash="{SSHA}d5mGx5mz3cgPhlcd520xUkWXmZR4GRfDpCQ1" />
+</zodb-users>

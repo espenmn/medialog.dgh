@@ -1,0 +1,5 @@
+kegleklubber,plone.app.contenttypes.content.Folder
+medlemsliste,plone.dexterity.content.Item
+slagningstider,plone.app.contenttypes.content.Document
+keglebanen,plone.app.contenttypes.content.Document
+kongeaften,plone.app.contenttypes.content.Folder

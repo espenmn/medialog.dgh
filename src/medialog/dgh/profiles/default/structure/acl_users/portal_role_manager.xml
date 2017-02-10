@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<zodb-roles title="" purge="False">
+ <role role_id="Contributor" title="" description="">
+  
+ </role>
+ <role role_id="Editor" title="" description="">
+  <principal principal_id="birte-mari-taule" />
+ </role>
+ <role role_id="Manager" title="" description="">
+  <principal principal_id="Administrators" />
+  <principal principal_id="birte-mari-taule" />
+ </role>
+ <role role_id="Owner" title="" description="">
+  
+ </role>
+ <role role_id="Reader" title="" description="">
+  
+ </role>
+ <role role_id="Reviewer" title="" description="">
+  <principal principal_id="Reviewers" />
+ </role>
+ <role role_id="Site Administrator" title="" description="">
+</zodb-roles>

@@ -1,0 +1,842 @@
+allow_discussion: 
+exclude_from_nav: False
+id: resultater-klubbvis
+title: Resultater klubbvis
+description: Resultater klubbvis 2015
+subjects: 
+language: no
+effective: 2017-02-03T19:01:35
+expires: 
+creators: birte-mari-taule
+contributors: 
+rights: 
+relatedItems: 
+changeNote: 
+table_of_contents: False
+content: 
+customContentLayout: 
+contentLayout: 
+pageSiteLayout: 
+sectionSiteLayout: 
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Portal-Type: Document
+
+<div class="ArticleHeading"> </div>
+<div class="ArticleContent">
+<div class="contentImagetopDiv"> </div>
+<div class="contentTextTop">
+<table border="0" width="517" cellspacing="0" cellpadding="0"><colgroup><col span="2" width="64" /><col width="129" /><col width="102" /><col width="64" /><col width="94" /></colgroup>
+<tbody>
+<tr>
+<td width="64" height="17"><a name="RANGE!A1:F101"></a>Plass</td>
+<td width="64">Poeng</td>
+<td width="129">Etternavn</td>
+<td width="102">Fornavn</td>
+<td width="64">Slagerpoeng</td>
+<td width="94">Klubb</td>
+</tr>
+<tr>
+<td height="17">1</td>
+<td>2648</td>
+<td>Johannessen</td>
+<td>Thomas Bucher</td>
+<td>716</td>
+<td>Jomfruen</td>
+</tr>
+<tr>
+<td height="17">1</td>
+<td>2648</td>
+<td>Ørgersen</td>
+<td>Lars Erik</td>
+<td>608</td>
+<td>Jomfruen</td>
+</tr>
+<tr>
+<td height="17">1</td>
+<td>2648</td>
+<td>Braathen</td>
+<td>Eivind</td>
+<td>600</td>
+<td>Jomfruen</td>
+</tr>
+<tr>
+<td height="17">1</td>
+<td>2648</td>
+<td>Hagesæter</td>
+<td>Erik</td>
+<td>724</td>
+<td>Jomfruen</td>
+</tr>
+<tr>
+<td height="17">2</td>
+<td>2567</td>
+<td>Herland</td>
+<td>Per</td>
+<td>772</td>
+<td>Hiva Kalescha</td>
+</tr>
+<tr>
+<td height="17">2</td>
+<td>2567</td>
+<td>Svenheim</td>
+<td>Bjarte</td>
+<td>689</td>
+<td>Hiva Kalescha</td>
+</tr>
+<tr>
+<td height="17">2</td>
+<td>2567</td>
+<td>Traaholt</td>
+<td>Petter</td>
+<td>585</td>
+<td>Hiva Kalescha</td>
+</tr>
+<tr>
+<td height="17">2</td>
+<td>2567</td>
+<td>Lunde</td>
+<td>Ørjan</td>
+<td>521</td>
+<td>Hiva Kalescha</td>
+</tr>
+<tr>
+<td height="17">3</td>
+<td>2553</td>
+<td>Liby</td>
+<td>Jan Richard</td>
+<td>648</td>
+<td>Klodrian</td>
+</tr>
+<tr>
+<td height="17">3</td>
+<td>2553</td>
+<td>Færøvik</td>
+<td>Petter N</td>
+<td>634</td>
+<td>Klodrian</td>
+</tr>
+<tr>
+<td height="17">3</td>
+<td>2553</td>
+<td>Joys</td>
+<td>Carl Fredrik</td>
+<td>692</td>
+<td>Klodrian</td>
+</tr>
+<tr>
+<td height="17">3</td>
+<td>2553</td>
+<td>Herland</td>
+<td>Stein</td>
+<td>579</td>
+<td>Klodrian</td>
+</tr>
+<tr>
+<td height="17">4</td>
+<td>2482</td>
+<td>Øverland</td>
+<td>Olav Rune</td>
+<td>665</td>
+<td>Gambrinus</td>
+</tr>
+<tr>
+<td height="17">4</td>
+<td>2482</td>
+<td>Nilsen</td>
+<td>Eivind</td>
+<td>546</td>
+<td>Gambrinus</td>
+</tr>
+<tr>
+<td height="17">4</td>
+<td>2482</td>
+<td>Sander</td>
+<td>Harald</td>
+<td>662</td>
+<td>Gambrinus</td>
+</tr>
+<tr>
+<td height="17">4</td>
+<td>2482</td>
+<td>Langhelle</td>
+<td>Thomas</td>
+<td>609</td>
+<td>Gambrinus</td>
+</tr>
+<tr>
+<td height="17">5</td>
+<td>2421</td>
+<td>Jordan</td>
+<td>Truls</td>
+<td>745</td>
+<td>Kyrre</td>
+</tr>
+<tr>
+<td height="17">5</td>
+<td>2421</td>
+<td>Madsen</td>
+<td>Tor Jack</td>
+<td>645</td>
+<td>Kyrre</td>
+</tr>
+<tr>
+<td height="17">5</td>
+<td>2421</td>
+<td>Larsen</td>
+<td>Thore</td>
+<td>570</td>
+<td>Kyrre</td>
+</tr>
+<tr>
+<td height="17">5</td>
+<td>2421</td>
+<td>Skare</td>
+<td>Jarl Reidar</td>
+<td>461</td>
+<td>Kyrre</td>
+</tr>
+<tr>
+<td height="17">6</td>
+<td>2417</td>
+<td>Øverås</td>
+<td>Trond Olav</td>
+<td>534</td>
+<td>Laboremus</td>
+</tr>
+<tr>
+<td height="17">6</td>
+<td>2417</td>
+<td>Sommersten</td>
+<td>Truls</td>
+<td>524</td>
+<td>Laboremus</td>
+</tr>
+<tr>
+<td height="17">6</td>
+<td>2417</td>
+<td>Benevoli</td>
+<td>Lars</td>
+<td>534</td>
+<td>Laboremus</td>
+</tr>
+<tr>
+<td height="17">6</td>
+<td>2417</td>
+<td>Vikøren</td>
+<td>Trygve</td>
+<td>825</td>
+<td>Laboremus</td>
+</tr>
+<tr>
+<td height="17">7</td>
+<td>2393</td>
+<td>Namtvedt</td>
+<td>Jan Fredrik</td>
+<td>485</td>
+<td>Kymbalon</td>
+</tr>
+<tr>
+<td height="17">7</td>
+<td>2393</td>
+<td>Johannessen</td>
+<td>Egil</td>
+<td>784</td>
+<td>Kymbalon</td>
+</tr>
+<tr>
+<td height="17">7</td>
+<td>2393</td>
+<td>Østervold</td>
+<td>Henrik</td>
+<td>609</td>
+<td>Kymbalon</td>
+</tr>
+<tr>
+<td height="17">7</td>
+<td>2393</td>
+<td>Eskestrand</td>
+<td>Jan</td>
+<td>515</td>
+<td>Kymbalon</td>
+</tr>
+<tr>
+<td height="17">8</td>
+<td>2352</td>
+<td>Blydt-Svendsen</td>
+<td>Frode</td>
+<td>624</td>
+<td>Hivan</td>
+</tr>
+<tr>
+<td height="17">8</td>
+<td>2352</td>
+<td>Ulvesæter</td>
+<td>Atle</td>
+<td>600</td>
+<td>Hivan</td>
+</tr>
+<tr>
+<td height="17">8</td>
+<td>2352</td>
+<td>Linde</td>
+<td>Ivar Kjetil</td>
+<td>682</td>
+<td>Hivan</td>
+</tr>
+<tr>
+<td height="17">8</td>
+<td>2352</td>
+<td>Larsen</td>
+<td>Geir Steen</td>
+<td>446</td>
+<td>Hivan</td>
+</tr>
+<tr>
+<td height="17">9</td>
+<td>2264</td>
+<td>Brinchmann-Hansen</td>
+<td>Erik</td>
+<td>633</td>
+<td>Hr. Kules</td>
+</tr>
+<tr>
+<td height="17">9</td>
+<td>2264</td>
+<td>Jæger jr</td>
+<td>Per</td>
+<td>593</td>
+<td>Hr. Kules</td>
+</tr>
+<tr>
+<td height="17">9</td>
+<td>2264</td>
+<td>Namtvedt</td>
+<td>Peter B</td>
+<td>536</td>
+<td>Hr. Kules</td>
+</tr>
+<tr>
+<td height="17">9</td>
+<td>2264</td>
+<td>Seim</td>
+<td>Helge T</td>
+<td>502</td>
+<td>Hr. Kules</td>
+</tr>
+<tr>
+<td height="17">10</td>
+<td>2165</td>
+<td>Eide</td>
+<td>Toby</td>
+<td>494</td>
+<td>Slendrian</td>
+</tr>
+<tr>
+<td height="17">10</td>
+<td>2165</td>
+<td>Eide</td>
+<td>Torfin</td>
+<td>459</td>
+<td>Slendrian</td>
+</tr>
+<tr>
+<td height="17">10</td>
+<td>2165</td>
+<td>Wolland</td>
+<td>Terje</td>
+<td>604</td>
+<td>Slendrian</td>
+</tr>
+<tr>
+<td height="17">10</td>
+<td>2165</td>
+<td>Lepsøe</td>
+<td>Anders Nome</td>
+<td>608</td>
+<td>Slendrian</td>
+</tr>
+<tr>
+<td height="17">11</td>
+<td>2137</td>
+<td>Trumpy</td>
+<td>Hans Jacob</td>
+<td>404</td>
+<td>Pepys</td>
+</tr>
+<tr>
+<td height="17">11</td>
+<td>2137</td>
+<td>Frønsdal</td>
+<td>Kjell</td>
+<td>402</td>
+<td>Pepys</td>
+</tr>
+<tr>
+<td height="17">11</td>
+<td>2137</td>
+<td>Mowinckel</td>
+<td>Ragnar</td>
+<td>609</td>
+<td>Pepys</td>
+</tr>
+<tr>
+<td height="17">11</td>
+<td>2137</td>
+<td>Langeland</td>
+<td>Agnar</td>
+<td>722</td>
+<td>Pepys</td>
+</tr>
+<tr>
+<td height="17">12</td>
+<td>2098</td>
+<td>Lund</td>
+<td>Svein Erik</td>
+<td>684</td>
+<td>Flax</td>
+</tr>
+<tr>
+<td height="17">12</td>
+<td>2098</td>
+<td>Eknes</td>
+<td>Bjørn Roald</td>
+<td>546</td>
+<td>Flax</td>
+</tr>
+<tr>
+<td height="17">12</td>
+<td>2098</td>
+<td>Trones</td>
+<td>Lars Helge</td>
+<td>524</td>
+<td>Flax</td>
+</tr>
+<tr>
+<td height="17">12</td>
+<td>2098</td>
+<td>Blom</td>
+<td>Erik</td>
+<td>344</td>
+<td>Flax</td>
+</tr>
+<tr>
+<td height="17">13</td>
+<td>2023</td>
+<td>Foss</td>
+<td>Frode</td>
+<td>629</td>
+<td>Öhlenschläger</td>
+</tr>
+<tr>
+<td height="17">13</td>
+<td>2023</td>
+<td>Andersen</td>
+<td>Steinar</td>
+<td>544</td>
+<td>Öhlenschläger</td>
+</tr>
+<tr>
+<td height="17">13</td>
+<td>2023</td>
+<td>Kordt</td>
+<td>Arthur</td>
+<td>427</td>
+<td>Öhlenschläger</td>
+</tr>
+<tr>
+<td height="17">13</td>
+<td>2023</td>
+<td>Løvøy</td>
+<td>Rolf</td>
+<td>423</td>
+<td>Öhlenschläger</td>
+</tr>
+<tr>
+<td height="17">14</td>
+<td>1915</td>
+<td>Kyrkjebø</td>
+<td>Lars Helge</td>
+<td>503</td>
+<td>Nulleren</td>
+</tr>
+<tr>
+<td height="17">14</td>
+<td>1915</td>
+<td>Nielsen</td>
+<td>Atle</td>
+<td>466</td>
+<td>Nulleren</td>
+</tr>
+<tr>
+<td height="17">14</td>
+<td>1915</td>
+<td>Salte</td>
+<td>Georg</td>
+<td>368</td>
+<td>Nulleren</td>
+</tr>
+<tr>
+<td height="17">14</td>
+<td>1915</td>
+<td>Sæverås</td>
+<td>Snorre</td>
+<td>578</td>
+<td>Nulleren</td>
+</tr>
+<tr>
+<td height="17">15</td>
+<td>1889</td>
+<td>Olsen</td>
+<td>Geir O.</td>
+<td>569</td>
+<td>Paraplyen</td>
+</tr>
+<tr>
+<td height="17">15</td>
+<td>1889</td>
+<td>Braathen</td>
+<td>Knut Harald</td>
+<td>543</td>
+<td>Paraplyen</td>
+</tr>
+<tr>
+<td height="17">15</td>
+<td>1889</td>
+<td>Sjong</td>
+<td>Stig</td>
+<td>464</td>
+<td>Paraplyen</td>
+</tr>
+<tr>
+<td height="17">15</td>
+<td>1889</td>
+<td>Larsen</td>
+<td>Tom H.</td>
+<td>313</td>
+<td>Paraplyen</td>
+</tr>
+<tr>
+<td height="17">16</td>
+<td>1885</td>
+<td>Haugland</td>
+<td>Bjørn</td>
+<td>403</td>
+<td>BOK</td>
+</tr>
+<tr>
+<td height="17">16</td>
+<td>1885</td>
+<td>Diesen</td>
+<td>Truls</td>
+<td>392</td>
+<td>BOK</td>
+</tr>
+<tr>
+<td height="17">16</td>
+<td>1885</td>
+<td>Olsen</td>
+<td>Bengt Martin</td>
+<td>434</td>
+<td>BOK</td>
+</tr>
+<tr>
+<td height="17">16</td>
+<td>1885</td>
+<td>Vablum</td>
+<td>Jan</td>
+<td>656</td>
+<td>BOK</td>
+</tr>
+<tr>
+<td height="17">17</td>
+<td>1860</td>
+<td>Godø</td>
+<td>Olav Rune</td>
+<td>512</td>
+<td>King Pins</td>
+</tr>
+<tr>
+<td height="17">17</td>
+<td>1860</td>
+<td>Torkildsen</td>
+<td>Bernt Helge</td>
+<td>426</td>
+<td>King Pins</td>
+</tr>
+<tr>
+<td height="17">17</td>
+<td>1860</td>
+<td>Svarstad</td>
+<td>Hans Martin</td>
+<td>394</td>
+<td>King Pins</td>
+</tr>
+<tr>
+<td height="17">17</td>
+<td>1860</td>
+<td>Furø</td>
+<td>Idar</td>
+<td>528</td>
+<td>King Pins</td>
+</tr>
+<tr>
+<td height="17">18</td>
+<td>1801</td>
+<td>Raunehaug</td>
+<td>Arnstein</td>
+<td>400</td>
+<td>Gunners</td>
+</tr>
+<tr>
+<td height="17">18</td>
+<td>1801</td>
+<td>Snyen</td>
+<td>Terje</td>
+<td>561</td>
+<td>Gunners</td>
+</tr>
+<tr>
+<td height="17">18</td>
+<td>1801</td>
+<td>Erichsen</td>
+<td>Leif</td>
+<td>424</td>
+<td>Gunners</td>
+</tr>
+<tr>
+<td height="17">18</td>
+<td>1801</td>
+<td>Hansen</td>
+<td>Egill</td>
+<td>416</td>
+<td>Gunners</td>
+</tr>
+<tr>
+<td height="17">19</td>
+<td>1798</td>
+<td>Døsvig</td>
+<td>Knut Galtung</td>
+<td>436</td>
+<td>Kjilevinken</td>
+</tr>
+<tr>
+<td height="17">19</td>
+<td>1798</td>
+<td>Aarheim</td>
+<td>Anders</td>
+<td>432</td>
+<td>Kjilevinken</td>
+</tr>
+<tr>
+<td height="17">19</td>
+<td>1798</td>
+<td>Holm</td>
+<td>Thorvald</td>
+<td>440</td>
+<td>Kjilevinken</td>
+</tr>
+<tr>
+<td height="17">19</td>
+<td>1798</td>
+<td>Solheim</td>
+<td>Erik</td>
+<td>490</td>
+<td>Kjilevinken</td>
+</tr>
+<tr>
+<td height="17">20</td>
+<td>1729</td>
+<td>Lunde</td>
+<td>Daniel</td>
+<td>468</td>
+<td>Gaudeamus</td>
+</tr>
+<tr>
+<td height="17">20</td>
+<td>1729</td>
+<td>Aabrekk</td>
+<td>Vigar</td>
+<td>420</td>
+<td>Gaudeamus</td>
+</tr>
+<tr>
+<td height="17">20</td>
+<td>1729</td>
+<td>Riise</td>
+<td>Kenneth</td>
+<td>332</td>
+<td>Gaudeamus</td>
+</tr>
+<tr>
+<td height="17">20</td>
+<td>1729</td>
+<td>Eide</td>
+<td>Per Anders</td>
+<td>509</td>
+<td>Gaudeamus</td>
+</tr>
+<tr>
+<td height="17">21</td>
+<td>1717</td>
+<td>Stølen</td>
+<td>Jostein</td>
+<td>451</td>
+<td>Kjilan</td>
+</tr>
+<tr>
+<td height="17">21</td>
+<td>1717</td>
+<td>Rundhovde</td>
+<td>Eric</td>
+<td>442</td>
+<td>Kjilan</td>
+</tr>
+<tr>
+<td height="17">21</td>
+<td>1717</td>
+<td>Haugland</td>
+<td>Kenneth</td>
+<td>434</td>
+<td>Kjilan</td>
+</tr>
+<tr>
+<td height="17">21</td>
+<td>1717</td>
+<td>Larsen</td>
+<td>Tor</td>
+<td>390</td>
+<td>Kjilan</td>
+</tr>
+<tr>
+<td height="17">22</td>
+<td>1678</td>
+<td>Thomassen</td>
+<td>Svein Steen</td>
+<td>362</td>
+<td>Susan</td>
+</tr>
+<tr>
+<td height="17">22</td>
+<td>1678</td>
+<td>Berle</td>
+<td>Paal-Henrich</td>
+<td>360</td>
+<td>Susan</td>
+</tr>
+<tr>
+<td height="17">22</td>
+<td>1678</td>
+<td>Fasmer jr.</td>
+<td>Hendrik</td>
+<td>468</td>
+<td>Susan</td>
+</tr>
+<tr>
+<td height="17">22</td>
+<td>1678</td>
+<td>Gulbrandsen</td>
+<td>Jan</td>
+<td>488</td>
+<td>Susan</td>
+</tr>
+<tr>
+<td height="17">23</td>
+<td>1536</td>
+<td>Litland</td>
+<td>Geir</td>
+<td>393</td>
+<td>Drusan</td>
+</tr>
+<tr>
+<td height="17">23</td>
+<td>1536</td>
+<td>Gisholt</td>
+<td>Kjell</td>
+<td>376</td>
+<td>Drusan</td>
+</tr>
+<tr>
+<td height="17">23</td>
+<td>1536</td>
+<td>Sivertsen</td>
+<td>Tore G.</td>
+<td>373</td>
+<td>Drusan</td>
+</tr>
+<tr>
+<td height="17">23</td>
+<td>1536</td>
+<td>Strand</td>
+<td>Erling</td>
+<td>394</td>
+<td>Drusan</td>
+</tr>
+<tr>
+<td height="17">24</td>
+<td>1531</td>
+<td>Haaland</td>
+<td>Bård</td>
+<td>577</td>
+<td>Heisan</td>
+</tr>
+<tr>
+<td height="17">24</td>
+<td>1531</td>
+<td>Berge</td>
+<td>Petter</td>
+<td>334</td>
+<td>Heisan</td>
+</tr>
+<tr>
+<td height="17">24</td>
+<td>1531</td>
+<td>Berge</td>
+<td>Karl H</td>
+<td>318</td>
+<td>Heisan</td>
+</tr>
+<tr>
+<td height="17">24</td>
+<td>1531</td>
+<td>Olsen</td>
+<td>Helge</td>
+<td>302</td>
+<td>Heisan</td>
+</tr>
+<tr>
+<td height="17">25</td>
+<td>1495</td>
+<td>Rieber</td>
+<td>Bjarne</td>
+<td>371</td>
+<td>Flintstone</td>
+</tr>
+<tr>
+<td height="17">25</td>
+<td>1495</td>
+<td>Døsvig</td>
+<td>Sigurd Galtung</td>
+<td>412</td>
+<td>Flintstone</td>
+</tr>
+<tr>
+<td height="17">25</td>
+<td>1495</td>
+<td>Arnesen</td>
+<td>Tor</td>
+<td>328</td>
+<td>Flintstone</td>
+</tr>
+<tr>
+<td height="17">25</td>
+<td>1495</td>
+<td>Hatlestad</td>
+<td>Per-Inge</td>
+<td>384</td>
+<td>Flintstone</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>

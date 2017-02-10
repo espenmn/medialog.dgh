@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<site>
+ <property name="title">Den Gode Hensigt</property>
+ <property name="description"></property>
+ <property name="default_page" type="string">front-page</property>
+</site>

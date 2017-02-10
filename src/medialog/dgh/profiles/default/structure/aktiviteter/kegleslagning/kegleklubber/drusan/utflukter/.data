@@ -1,0 +1,59 @@
+allow_discussion: 
+exclude_from_nav: False
+id: utflukter
+title: Utflukter
+description: 
+subjects: 
+language: no
+effective: 
+expires: 
+creators: admin
+contributors: 
+rights: 
+relatedItems: 
+changeNote: 
+table_of_contents: False
+content: 
+customContentLayout: 
+contentLayout: 
+pageSiteLayout: 
+sectionSiteLayout: 
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Portal-Type: Document
+
+<div class="articlecontainer">
+<div id="ctl00_content_ctl00_ctl02_divTopArticleModule" class="ArticleModule artnr1">
+<div id="ctl00_content_ctl00_ctl02_ctl00_content_ctl00_ctl02_editPanel1Panel">
+<div id="ctl00_content_ctl00_ctl02_editPanel1">
+<div id="ctl00_content_ctl00_ctl02_pnlView"><span id="ctl00_content_ctl00_ctl02_lblAnchor"><a class="tocNameTag" name="a249"></a></span>
+<div class="ArticleHeading"> </div>
+<div class="ArticleContent">
+<div class="contentTextTop">
+<div>1998: Helmers Olsen, Lysodden, Drange</div>
+<div>1999: Elbjørg og Bjørn Bye, Drange</div>
+<div>1999: Kinsarvik</div>
+<div>2001: Selje</div>
+<div>2002: Marsteinen</div>
+<div>2003: Herdla</div>
+<div>2003: Aberdeen</div>
+<div>2005: Geiranger, Ålesund</div>
+<div>2006: Fjærland</div>
+<div>2007: Berlin</div>
+<div>2008: Alicante (Aslaug og Rolf Slaastad)</div>
+<div>2009: Fløholmen (Lise og Tore Eide)</div>
+<div>2009: Krakow</div>
+<div>2010: Austevoll</div>
+<div>18.06.11: Tore og A.K. Opsahl, Osterøy</div>
+<div>29.09-02.10.2011: Paris</div>
+<div>16.06.12: Lokøy. Inger og Gunnar Alsaker</div>
+<div>2013: ROMA 26-29.sept</div>
+<div>2014: 3-4.08: Rosendal. Lunsj hos Elsa og Tor Sivertsen</div>
+<div>2015; Toscana (Colle val d`Elsa) 15-19.sept</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>

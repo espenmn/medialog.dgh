@@ -27,9 +27,10 @@
     />
 
   <browser:page
-        name="groups_email"
+        name="send_groupmail"
         for="*"
         layer="medialog.dgh.interfaces.IMedialogDghLayer"
+        attribute="send_groupmail"
         class="medialog.dgh.browser.views.GroupsEmail"
         permission="cmf.ManagePortal"
     />

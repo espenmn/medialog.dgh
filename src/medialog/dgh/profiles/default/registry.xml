@@ -1,3 +1,57 @@
-<?xml version="1.0"?>
-<registry>
+<registry purge="False">
+  <record name="plone.email_charset" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="email_charset">
+    <field type="plone.registry.field.ASCIILine">
+      <default>utf-8</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Characterset to use when sending e-mails.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">E-mail characterset</title>
+    </field>
+    <value>utf-8</value>
+  </record>
+  <record name="plone.email_from_address" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="email_from_address">
+    <field type="plone.registry.field.ASCIILine">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Plone generates e-mail using this address as the e-mail return address. It is also used as the destination address for the site-wide contact form and the 'Send test e-mail' feature.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Site 'From' address</title>
+    </field>
+    <value>admin@dgh.no</value>
+  </record>
+  <record name="plone.email_from_name" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="email_from_name">
+    <field type="plone.registry.field.TextLine">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Plone generates e-mail using this name as the e-mail sender.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Site 'From' name</title>
+    </field>
+    <value>Den gode Hensigt</value>
+  </record>
+  
+  <record name="plone.smtp_host" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="smtp_host">
+    <field type="plone.registry.field.TextLine">
+      <default>localhost</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_smtp_server">The address of your local SMTP (outgoing e-mail) server. Usually 'localhost', unless you use an external server to send e-mail.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_smtp_server">SMTP server</title>
+    </field>
+    <value>localhost</value>
+  </record>
+  <record name="plone.smtp_pass" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="smtp_pass">
+    <field type="plone.registry.field.Password">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_smtp_pass">The password for the ESMTP user account.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_smtp_pass">ESMTP password</title>
+    </field>
+    <value/>
+  </record>
+  <record name="plone.smtp_port" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="smtp_port">
+    <field type="plone.registry.field.Int">
+      <default>25</default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_smtp_port">The port of your local SMTP (outgoing e-mail) server. Usually '25'.</description>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_smtp_port">SMTP port</title>
+    </field>
+    <value>25</value>
+  </record>
+  <record name="plone.smtp_userid" interface="Products.CMFPlone.interfaces.controlpanel.IMailSchema" field="smtp_userid">
+    <field type="plone.registry.field.TextLine">
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_smtp_userid">Username for authentication to your e-mail server. Not required unless you are using ESMTP.</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_smtp_userid">ESMTP username</title>
+    </field>
+    <value/>
+  </record>
 </registry>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+   purge="False">
+  <object name="send_groupmail" meta_type="CMF Action"
+     i18n:domain="medialog.dgh">
+   <property name="title" i18n:translate="">Send mail til gruppe</property>
+   <property name="description" i18n:translate="">None</property>
+   <property name="url_expr">string:${object_url}/@@send_groupmail</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr">None</property>
+   <property name="permissions">
+    <element value="Manage Site"/>
+    <element value="View Groups"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="send_testmail" meta_type="CMF Action"
+     i18n:domain="medialog.dgh">
+   <property name="title" i18n:translate="">send_testmail</property>
+   <property name="description" i18n:translate="">None</property>
+   <property name="url_expr">string:${object_url}/@@send_testmail</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr">None</property>
+   <property name="permissions">
+    <element value="Manage Site"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+ </object>

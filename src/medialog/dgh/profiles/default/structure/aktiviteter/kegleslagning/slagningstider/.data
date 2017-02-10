@@ -1,0 +1,153 @@
+allow_discussion: 
+exclude_from_nav: False
+id: slagningstider
+title: Slagningstider
+description: Ukeplan
+subjects: 
+language: no
+effective: 2017-02-01T17:47:00
+expires: 
+creators: admin
+contributors: 
+rights: 
+relatedItems: 
+changeNote: 
+table_of_contents: False
+content: 
+customContentLayout: 
+contentLayout: 
+pageSiteLayout: 
+sectionSiteLayout: 
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Portal-Type: Document
+
+<div class="ArticleHeading"> </div>
+<div class="ArticleContent">
+<div class="contentTextTop">
+<table border="0" width="500" cellspacing="2" cellpadding="2">
+<tbody>
+<tr>
+<td><strong>Mandag</strong></td>
+<td> </td>
+</tr>
+<tr>
+<td>FLAX </td>
+<td>Kl. 16.30-17.30 Hver uke</td>
+</tr>
+<tr>
+<td>KLODRIAN </td>
+<td>KL. 17.30-18.45 Hver uke</td>
+</tr>
+<tr>
+<td>DRUSAN </td>
+<td>KL. 19.00-21.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td>HIVAN </td>
+<td>KL. 19.00-21.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td>FLINTSTONE </td>
+<td>KL. 21.00-23.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td>HR. KULES </td>
+<td>KL. 21.00-23.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td><strong><br />Tirsdag</strong></td>
+<td> </td>
+</tr>
+<tr>
+<td>BOK</td>
+<td>KL. 16.30-18.30 Hver 14. dag</td>
+</tr>
+<tr>
+<td>JOMFRUEN</td>
+<td>KL. 16.30-18.30 Hver 14. dag</td>
+</tr>
+<tr>
+<td>GAUDEAMUS</td>
+<td>KL. 18.30-20.30 Hver uke</td>
+</tr>
+<tr>
+<td>HIVA KALESCHA</td>
+<td>KL. 21.00-23.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td>SLENDRIAN</td>
+<td>KL. 21.00-23.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td><strong><br />Onsdag</strong></td>
+<td> </td>
+</tr>
+<tr>
+<td>PEPYS</td>
+<td>KL. 15.30-16.30 Hver uke</td>
+</tr>
+<tr>
+<td>SUSAN</td>
+<td>KL. 16.30-17.30 Hver uke</td>
+</tr>
+<tr>
+<td>OEHLENSCHLÄGER</td>
+<td>Kl.. 17.30-19.15 Hver 14. dag</td>
+</tr>
+<tr>
+<td>KING PINS</td>
+<td>Kl.. 17.30-19.15 Hver 14. dag</td>
+</tr>
+<tr>
+<td>HEISAN</td>
+<td>KL. 19.15-20.45 Hver uke</td>
+</tr>
+<tr>
+<td>KYMBALON</td>
+<td>KL. 21.00-23.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td>KJILEVINKEN</td>
+<td>KL. 21.00-23.00 Hver 14. dag</td>
+</tr>
+<tr>
+<td><strong><br />Torsdag</strong></td>
+<td> </td>
+</tr>
+<tr>
+<td>GUNNERS</td>
+<td>KL. 16.30-18.30 Hver uke</td>
+</tr>
+<tr>
+<td>LABOREMUS</td>
+<td>KL. 18.30-20.45 Hver uke</td>
+</tr>
+<tr>
+<td>GAMBRINUS </td>
+<td>KL. 21.00-23.00 Hver uke</td>
+</tr>
+<tr>
+<td><strong><br />Fredag</strong></td>
+<td> </td>
+</tr>
+<tr>
+<td>NULLEREN</td>
+<td>KL. 16.30-18.30 Hver uke</td>
+</tr>
+<tr>
+<td>KJILAN</td>
+<td>KL. 18.30-20.30 Hver uke</td>
+</tr>
+<tr>
+<td>PARAPLYEN </td>
+<td>KL. 20.30-22.30 Hver 14. dag</td>
+</tr>
+<tr>
+<td>KYRRE</td>
+<td>KL. 20.30-22.30 Hver 14. dag</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>

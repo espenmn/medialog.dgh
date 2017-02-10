@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <zodb-groups title="" >
  <group group_id="Administrators" title="Administrators" description="">
+  <principal principal_id="birte-mari-taule" />
  </group>
  <group group_id="Bok" title="Bok" description="">
   

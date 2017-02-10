@@ -1,0 +1,106 @@
+allow_discussion: 
+exclude_from_nav: False
+id: front-page
+title: DgH
+description: Selskabet Den gode Hensigt
+subjects: 
+language: no
+effective: 2017-01-30T12:59:00
+expires: 
+creators: admin
+contributors: 
+rights: 
+relatedItems: 
+changeNote: 
+table_of_contents: False
+content: =?utf-8?q?=3C!DOCTYPE_html=3E=0D=0A=3Chtml_lang=3D=22en=22_data-layout=3D=22?=
+ =?utf-8?q?=2E/=40=40page-site-layout=22=3E=3Cbody_data-panel=3D=22content?=
+ =?utf-8?q?=22=3E=0D=0A=3Cdiv_data-tile=3D=22=40=40medialog=2Eiconpicker=2Eti?=
+ =?utf-8?q?le/f7712518fb2440a790a5ff1cf1c2a0b0=22_data-tiledata=3D=27=7B?=
+ =?utf-8?q?=22iconfield=22=3A_=22fa-exclamation-triangle=22=2C_=22color=22?=
+ =?utf-8?q?=3A_=22000=22=2C_=22title=22=3A_=22Kjegleslagning=22=2C_=22text?=
+ =?utf-8?q?=22=3A_=22xx=22=2C_=22css=5Fclass=22=3A_null=7D=27=3E=3C/div=3E?=
+ =?utf-8?q?=0D=0A=3Cdiv_data-tile=3D=22=40=40medialog=2Eiconpicker=2Etile/f02?=
+ =?utf-8?q?6c108cca04bc3b6ac2e177bf503f1=22_data-tiledata=3D=27=7B=22iconf?=
+ =?utf-8?q?ield=22=3A_=22fa-adjust=22=2C_=22color=22=3A_=22=23123456=22=2C?=
+ =?utf-8?q?_=22title=22=3A_=22Biljard=22=2C_=22text=22=3A_null=2C_=22css?=
+ =?utf-8?q?=5Fclass=22=3A_null=7D=27=3E=3C/div=3E=0D=0A=3Cdiv_data-tile=3D=22?=
+ =?utf-8?q?=40=40medialog=2Eiconpicker=2Etile/f542a78cd23e4b5b9decd57cd5cd?=
+ =?utf-8?q?3c50=22_data-tiledata=3D=27=7B=22iconfield=22=3A_=22fa-cloud-do?=
+ =?utf-8?q?wnload=22=2C_=22color=22=3A_=22123456=22=2C_=22title=22=3A_=22K?=
+ =?utf-8?q?ortspill=22=2C_=22text=22=3A_null=2C_=22css=5Fclass=22=3A_null?=
+ =?utf-8?q?=7D=27=3E=3C/div=3E=0D=0A=3C/body=3E=3C/html=3E=0D=0A?=
+customContentLayout: =?utf-8?q?=3C!DOCTYPE_html_PUBLIC_=22-//W3C//DTD_XHTML_1=2E0_Transitional?=
+ =?utf-8?q?//EN=22_=22http=3A//www=2Ew3=2Eorg/TR/xhtml1/DTD/xhtml1-transit?=
+ =?utf-8?q?ional=2Edtd=22=3E=0D=0A=3Chtml_xmlns=3D=22http=3A//www=2Ew3=2Eo?=
+ =?utf-8?q?rg/1999/xhtml=22_xml=3Alang=3D=22en=22_lang=3D=22en=22_data-lay?=
+ =?utf-8?q?out=3D=22=2E/=40=40page-site-layout=22=3E=0D=0A__=3Cbody=3E=0D=0A?=
+ =?utf-8?q?=0D=0A____=3Cdiv_data-panel=3D=22content=22_________data-max-colum?=
+ =?utf-8?q?ns=3D=224=22=3E=0D=0A______=3Cdiv_class=3D=22mosaic-grid-row=22?=
+ =?utf-8?q?=3E=0D=0A________=3Cdiv_class=3D=22mosaic-grid-cell_mosaic-widt?=
+ =?utf-8?q?h-full_mosaic-position-leftmost=22=3E=0D=0A__________=3Cdiv_cla?=
+ =?utf-8?q?ss=3D=22movable_removable_mosaic-tile_mosaic-IDublinCore-title-?=
+ =?utf-8?q?tile=22=3E=0D=0A__________=3Cdiv_class=3D=22mosaic-tile-content?=
+ =?utf-8?q?=22=3E=0D=0A__________=3Cdiv_data-tile=3D=22=2E/=40=40plone=2Ea?=
+ =?utf-8?q?pp=2Estandardtiles=2Efield=3Ffield=3DIDublinCore-title=22=3E=3C?=
+ =?utf-8?q?/div=3E=0D=0A__________=3C/div=3E=0D=0A__________=3C/div=3E=0D=0A?=
+ =?utf-8?q?=0D=0A________=3C/div=3E=0D=0A______=3C/div=3E=0D=0A______=3Cdiv_c?=
+ =?utf-8?q?lass=3D=22mosaic-grid-row=22=3E=0D=0A________=3Cdiv_class=3D=22?=
+ =?utf-8?q?mosaic-grid-cell_mosaic-width-full_mosaic-position-leftmost=22?=
+ =?utf-8?q?=3E=0D=0A__________=3Cdiv_class=3D=22movable_removable_mosaic-t?=
+ =?utf-8?q?ile_mosaic-IDublinCore-description-tile=22=3E=0D=0A__________?=
+ =?utf-8?q?=3Cdiv_class=3D=22mosaic-tile-content=22=3E=0D=0A__________=3Cd?=
+ =?utf-8?q?iv_data-tile=3D=22=2E/=40=40plone=2Eapp=2Estandardtiles=2Efield?=
+ =?utf-8?q?=3Ffield=3DIDublinCore-description=22=3E=3C/div=3E=0D=0A_______?=
+ =?utf-8?q?___=3C/div=3E=0D=0A__________=3C/div=3E=0D=0A________=3C/div=3E?=
+ =?utf-8?q?=0D=0A______=3C/div=3E=0D=0A______=3Cdiv_class=3D=22mosaic-grid?=
+ =?utf-8?q?-row=22=3E=0D=0A________=3Cdiv_class=3D=22mosaic-grid-cell_mosa?=
+ =?utf-8?q?ic-width-full_mosaic-position-leftmost=22=3E=0D=0A__________=3C?=
+ =?utf-8?q?div_class=3D=22movable_removable_mosaic-tile_mosaic-IRichText-t?=
+ =?utf-8?q?ext-tile=22=3E=0D=0A__________=3Cdiv_class=3D=22mosaic-tile-con?=
+ =?utf-8?q?tent=22=3E=0D=0A__________=3Cdiv_data-tile=3D=22=2E/=40=40plone?=
+ =?utf-8?q?=2Eapp=2Estandardtiles=2Efield=3Ffield=3DIRichText-text=22=3E?=
+ =?utf-8?q?=3C/div=3E=0D=0A__________=3C/div=3E=0D=0A__________=3C/div=3E?=
+ =?utf-8?q?=0D=0A________=3C/div=3E=0D=0A______=3C/div=3E=0D=0A______=3Cdi?=
+ =?utf-8?q?v_class=3D=22mosaic-grid-row=22=3E=0D=0A________=3Cdiv_class=3D?=
+ =?utf-8?q?=22mosaic-grid-cell_mosaic-width-third_mosaic-position-leftmost?=
+ =?utf-8?q?=22=3E=0D=0A__________=3Cdiv_class=3D=22movable_removable_mosai?=
+ =?utf-8?q?c-tile_mosaic-medialog=2Eiconpicker=2Etile-tile=22=3E=0D=0A____?=
+ =?utf-8?q?______=3Cdiv_class=3D=22mosaic-tile-content=22=3E=0D=0A________?=
+ =?utf-8?q?__=3Cdiv_data-tile=3D=22=2E/=40=40medialog=2Eiconpicker=2Etile/?=
+ =?utf-8?q?f7712518fb2440a790a5ff1cf1c2a0b0=3Ficonfield=3Dfa-exclamation-t?=
+ =?utf-8?q?riangle=26amp=3Bcolor=3D000=26amp=3Btitle=3DKjegleslagning=26am?=
+ =?utf-8?q?p=3Btext=3Dxx=22=3E=3C/div=3E=0D=0A__________=3C/div=3E=0D=0A__?=
+ =?utf-8?q?________=3C/div=3E=0D=0A________=3C/div=3E=0D=0A________=3Cdiv_?=
+ =?utf-8?q?class=3D=22mosaic-grid-cell_mosaic-width-third_mosaic-position-?=
+ =?utf-8?q?third=22=3E=0D=0A__________=3Cdiv_class=3D=22movable_removable_?=
+ =?utf-8?q?mosaic-tile_mosaic-medialog=2Eiconpicker=2Etile-tile=22=3E=0D=0A?=
+ =?utf-8?q?=0D=0A__________=3Cdiv_class=3D=22mosaic-tile-content=22=3E=0D=0A_?=
+ =?utf-8?q?_________=3Cdiv_data-tile=3D=22=2E/=40=40medialog=2Eiconpicker?=
+ =?utf-8?q?=2Etile/f542a78cd23e4b5b9decd57cd5cd3c50=3Ficonfield=3Dfa-cloud?=
+ =?utf-8?q?-download=26amp=3Bcolor=3D123456=26amp=3Btitle=3DKortspill=22?=
+ =?utf-8?q?=3E=3C/div=3E=0D=0A__________=3C/div=3E=0D=0A__________=3C/div?=
+ =?utf-8?q?=3E=0D=0A________=3C/div=3E=0D=0A________=3Cdiv_class=3D=22mosa?=
+ =?utf-8?q?ic-grid-cell_mosaic-width-third_mosaic-position-two-thirds=22?=
+ =?utf-8?q?=3E=0D=0A__________=3Cdiv_class=3D=22movable_removable_mosaic-t?=
+ =?utf-8?q?ile_mosaic-medialog=2Eiconpicker=2Etile-tile=22=3E=0D=0A_______?=
+ =?utf-8?q?___=3Cdiv_class=3D=22mosaic-tile-content=22=3E=0D=0A__________?=
+ =?utf-8?q?=3Cdiv_data-tile=3D=22=2E/=40=40medialog=2Eiconpicker=2Etile/f0?=
+ =?utf-8?q?26c108cca04bc3b6ac2e177bf503f1=3Ficonfield=3Dfa-adjust=26amp=3B?=
+ =?utf-8?q?color=3D=2523123456=26amp=3Btitle=3DBiljard=22=3E=3C/div=3E=0D=0A?=
+ =?utf-8?q?=0D=0A__________=3C/div=3E=0D=0A__________=3C/div=3E=0D=0A________?=
+ =?utf-8?q?=3C/div=3E=0D=0A______=3C/div=3E=0D=0A____=3C/div=3E=0D=0A__=3C?=
+ =?utf-8?q?/body=3E=0D=0A=3C/html=3E?=
+contentLayout: 
+pageSiteLayout: 
+sectionSiteLayout: 
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Portal-Type: Document
+
+<div> </div>
+<div>Tilkomsten til siden er ved  å logge inn med din epostl og passord !</div>
+<div>Dersom du glemmer passordet eller ønsker et nytt kan du trykke på lenken: 'Glemt passord" så kontakt DgH s kontor</div>
+<div>på epost: <a href="mailto:admin@dgh.no?subject=Glemt passord" data-linktype="email" data-val="admin@dgh.no" data-subject="Glemt passord">admin@dgh.no</a> .</div>
+<div> </div>
+<p> <img class="image-inline" title="DgH" src="../resolveuid/cbf3d0eab5084bf9af53285ee6873078/@@images/image/large" data-linktype="image" data-scale="large" data-val="cbf3d0eab5084bf9af53285ee6873078" /></p>

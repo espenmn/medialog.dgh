@@ -1,0 +1,7 @@
+om-kegleklubben-drusan,plone.app.contenttypes.content.Document
+presidenter,plone.app.contenttypes.content.Document
+resultater,plone.app.contenttypes.content.Document
+terminliste,plone.app.contenttypes.content.Document
+utflukter,plone.app.contenttypes.content.Document
+vedtekter,plone.app.contenttypes.content.Document
+arsrapport_2016_for_drusan.docx,plone.app.contenttypes.content.File
