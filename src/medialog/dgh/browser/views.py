@@ -31,7 +31,7 @@ class MedlemmerView(BrowserView):
     def __call__(self, *args, **kw):
         current = api.user.get_current()
         import pdb; pdb.set_trace()
-        if api.user.get_roles(current):
+        if 'Manager' in api.user.get_roles(current.id):
             template = ViewPageTemplateFile('medlemmer_full_view.pt')
         return self.template(self.context)
 
