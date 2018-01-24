@@ -27,8 +27,12 @@ class MedlemmerView(BrowserView):
     """
 
     template = ViewPageTemplateFile('medlemmer_view.pt')
+    current = api.user.get_current()
+    if 'Manager' in api.user.get_roles(current.id):
+        template = ViewPageTemplateFile('medlemmer_full_view.pt')
 
     def __call__(self, *args, **kw):
+        template = ViewPageTemplateFile('medlemmer_view.pt')
         current = api.user.get_current()
         if 'Manager' in api.user.get_roles(current.id):
             template = ViewPageTemplateFile('medlemmer_full_view.pt')
