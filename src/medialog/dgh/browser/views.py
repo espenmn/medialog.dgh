@@ -26,17 +26,15 @@ class MedlemmerView(BrowserView):
     """ View to show users
     """
 
-    template = ViewPageTemplateFile('medlemmer_view.pt')
-    current = api.user.get_current()
-    if 'Manager' in api.user.get_roles(current.id):
-        template = ViewPageTemplateFile('medlemmer_full_view.pt')
+    template   = ViewPageTemplateFile('medlemmer_view.pt')
+    m_template = ViewPageTemplateFile('medlemmer_full_view.pt')
 
     def __call__(self, *args, **kw):
-        template = ViewPageTemplateFile('medlemmer_view.pt')
         current = api.user.get_current()
         if 'Manager' in api.user.get_roles(current.id):
-            template = ViewPageTemplateFile('medlemmer_full_view.pt')
-        return self.template(self.context)
+            return self.m_template(self.context)
+        else:
+            return self.template(self.context)
 
     def all_users(self):
         return api.user.get_users()
