@@ -31,9 +31,7 @@ class MedlemmerView(BrowserView):
 
     def __call__(self, *args, **kw):
         #current = api.user.get_current()
-        user_permissions = api.user.get_permissions()
-        import pdb; pdb.set_trace()
-        if 'Manager' in api.user.get_roles(current.id):
+        if api.user.get_permissions()['Manage portal']:
             return self.m_template(self.context)
         return self.template(self.context)
 
