@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="medialog.dgh">
+<body>
+<metal:main fill-slot="content-core">
+  <p class="discreet">Klikk på tabellheadingen for å sortere</p>
+
+  <table class="sortable pat-tablesorter">
+    <thead>
+      <tr>
+        <th>Etternavn</th>
+        <th>Fornavn</th>
+        <th>Tittel</th>
+        <th>Adresse</th>
+        <th>Postnr</th>
+        <th>Poststed</th>
+        <th>Telefon</th>
+        <th>Epost</th>
+        <th>Klubb(er)</th>
+        <th>Innm.</th>
+        <th>Honnør</th>
+        <th>Utenbys</th>
+        <th>Verifisert?</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr  tal:repeat="medlem view/group_users">
+           <td>${medlem/etternavn}</td>
+           <td>${medlem/fornavn}</td>
+           <td>${medlem/tittel}</td>
+           <td>${medlem/adresse}</td>
+           <td>${medlem/postnr}</td>
+           <td>${medlem/poststed}</td>
+           <td>${medlem/telefon}</td>
+           <td><a href="mailto:${medlem/email}">${medlem/email}</a></td>
+           <td>${medlem/group}</td>
+           <td>${medlem/innmeldingsar}</td>
+           <td>${medlem/honnor}</td>
+           <td>${medlem/utenbys}</td>
+           <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Nei!</span></td>
+    </tr>
+    </tbody>
+
+  </table>
+
+<script type="text/javascript" src="http://cdn.ucb.org.br/Scripts/tablesorter/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="https://www.asvg.no/jquery.filtertable.js"></script>
+<script>
+$(function(){
+  $('table.sortable').tablesorter({ sortList: [[0,0], [1,0]] });
+});
+</script>
+
+
+<script>
+       $('table').filterTable();
+</script>
+
+</metal:main>
+</body>
+</html>
+   })

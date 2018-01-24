@@ -29,17 +29,21 @@ class MedlemmerView(BrowserView):
     template = ViewPageTemplateFile('medlemmer_view.pt')
 
     def __call__(self, *args, **kw):
+        current = api.user.get_current()
+        import pdb; pdb.set_trace()
+        if api.user.get_roles(current):
+            template = ViewPageTemplateFile('medlemmer_full_view.pt')
         return self.template(self.context)
-        
+
     def all_users(self):
         return api.user.get_users()
-        
+
     @property
     def group_users(self):
         group = self.context.group or None
         usergroup = api.user.get_users(groupname=group)
         userlist = []
-        
+
         for member in usergroup:
             group = api.group.get_groups(user=member)
             grupper = ', '.join(str(e) for e in group[1:])
@@ -60,10 +64,10 @@ class MedlemmerView(BrowserView):
                   'group': grupper,
                   'verified': member.getProperty('login_time').strftime('%Y') != '2000'
                   })
-            
+
         return userlist
-        
-        
+
+
 class GroupsEmail(BrowserView):
     """ send email to everyone in a group  """
 
@@ -78,34 +82,34 @@ class GroupsEmail(BrowserView):
             usergroup = api.user.get_users(groupname=group)
         else:
             usergroup = api.user.get_users()
-        
+
         for member in usergroup:
             group = api.group.get_groups(user=member)
             receipt = member.getProperty('email')
             self.send_email(context, request, receipt)
-        
+
         self.request.response.redirect(self.context.absolute_url())
-            
+
 
     def send_email(self, context, request, receipt):
         title = context.Title()
         description = context.Description()
         body_html =  u'<html><div class="mailcontent"><h1 class="documentFirstHeading">' + title + u'</h1><div class="documentDescription description">' + description + u'</div>' + context.text.output + u'</div></html>'
-        
+
         #for 'non HTML mail clients'
         transforms = api.portal.get_tool(name='portal_transforms')
         stream = transforms.convertTo('text/plain', body_html, mimetype='text/html')
         body_plain = stream.getData().strip()
 
         messages = IStatusMessage(self.request)
-   
+
         # ready to create multipart mail
         try:
             mailhost = api.portal.get_tool(name='MailHost')
             # discovered that plone api might do this better
             # plone.api.portal.send_email , maybe
             outer = MIMEMultipart('alternative')
-            outer['To'] = receipt 
+            outer['To'] = receipt
             outer['From'] = api.portal.get_registry_record('plone.email_from_address')
             outer['Subject'] = title
             outer.epilogue = ''
@@ -125,20 +129,20 @@ class GroupsEmail(BrowserView):
             outer.attach(html_part)
 
             mailhost.send(outer.as_string())
-            
+
             messages.add(_("sent_mail_message",  default=u"Sendt til $email",
                                                  mapping={'email': receipt },
                                                  ),
-                                                 type="info")  
+                                                 type="info")
 
         except:
             messages.add(_("cant_send_mail_message",
                                                  default=u"Kunne ikke sende til $email",
                                                  mapping={'email': receipt },
                                                  ),
-                                                 type="warning")    
-            
-            
+                                                 type="warning")
+
+
     def sendt_testmail(self):
         con  = self.context
         request = self.request
