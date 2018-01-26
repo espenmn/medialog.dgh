@@ -148,5 +148,6 @@ class GroupsEmail(BrowserView):
         request = self.request
         user = api.user.get_current()
         receipt = user.getProperty('email')
+        import pdb;pdb.set_trace()
         self.send_email(context, request, receipt)
-        #self.request.response.redirect(self.context.absolute_url())
+        self.request.response.redirect(self.context.absolute_url())
