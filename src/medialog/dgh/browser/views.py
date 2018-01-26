@@ -146,6 +146,7 @@ class GroupsEmail(BrowserView):
     def sendt_testmail(self):
         con  = self.context
         request = self.request
-        receipt = 'espen@medialog.no'
+        user = api.user.get_current()
+        receipt = user.getProperty('email')
         self.send_email(context, request, receipt)
         self.request.response.redirect(self.context.absolute_url())
