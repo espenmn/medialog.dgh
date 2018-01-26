@@ -147,10 +147,6 @@ class GroupsEmail(BrowserView):
         context = self.context
         request = self.request
         member = api.user.get_current()
-        #this is an ugly workaround
-        for member in member:
-            group = api.group.get_groups(user=member)
-            receipt = member.getProperty('email')
-            self.send_email(context, request, receipt)
-
+        receipt = member.getProperty('email')
+        self.send_email(context, request, receipt)
         self.request.response.redirect(self.context.absolute_url())
