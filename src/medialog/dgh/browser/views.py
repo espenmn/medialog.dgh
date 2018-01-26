@@ -144,7 +144,7 @@ class GroupsEmail(BrowserView):
 
 
     def sendt_testmail(self):
-        con  = self.context
+        context = self.context
         request = self.request
         user = api.user.get_current()
         receipt = user.getProperty('email')
