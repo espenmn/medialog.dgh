@@ -67,6 +67,7 @@ class MedlemmerView(BrowserView):
                   'login_time': member.getProperty('login_time'),
                   })
 
+        import pdb; pdb.set_trace()
         return userlist
 
 

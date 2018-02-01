@@ -7,11 +7,11 @@
       i18n:domain="medialog.dgh">
 <body>
 <metal:main fill-slot="content-core">
-  <p class="discreet">Klikk på tabellheadingen for å sortere</p> 
-  
+  <p class="discreet">Klikk på tabellheadingen for å sortere</p>
+
   <table class="sortable pat-tablesorter">
     <thead>
-      <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innm.</th><th>Verifisert?</th></tr>      
+      <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innm.</th><th>Verifisert?</th></tr>
     </thead>
     <tbody>
     <tr  tal:repeat="medlem view/group_users">
@@ -20,17 +20,17 @@
            <td>${medlem/tittel}</td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Nei!</span></td>             
+           <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">•</span></td>             
     </tr>
     </tbody>
-          
+
   </table>
 
 <script type="text/javascript" src="http://cdn.ucb.org.br/Scripts/tablesorter/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="https://www.asvg.no/jquery.filtertable.js"></script>
 <script>
 $(function(){
-  $('table.sortable').tablesorter({ sortList: [[0,0], [1,0]] }); 
+  $('table.sortable').tablesorter({ sortList: [[0,0], [1,0]] });
 });
 </script>
 
@@ -42,4 +42,3 @@ $(function(){
 </metal:main>
 </body>
 </html>
-
