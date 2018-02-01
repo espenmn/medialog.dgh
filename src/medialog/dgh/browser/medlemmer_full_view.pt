@@ -40,8 +40,8 @@
            <td><a href="mailto:${medlem/email}">${medlem/email}</a></td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td><tal:check tal:condition="medlem/honnor">X</tal:check></td>
-           <td><tal:check tal:condition="medlem/utenbys">X</tal:check></td>
+           <td align="center"><tal:check tal:condition="medlem/honnor">X</tal:check></td>
+           <td align="center"><tal:check tal:condition="medlem/utenbys">X</tal:check></td>
            <td class="pat-moment">${medlem/login_time}</td>
            <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Nei!</span> </td>
     </tr>
