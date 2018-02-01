@@ -29,7 +29,7 @@
     </thead>
     <tbody>
     <tr  tal:repeat="medlem view/group_users">
-           <td><a href="/@@user-information?userid=${medlem/userid}">${medlem/etternavn}</a></td>
+           <td><a href="/@@user-information?userid=${medlem/id}">${medlem/etternavn}</a></td>
            <td>${medlem/fornavn}</td>
            <td>${medlem/tittel}</td>
            <td>${medlem/adresse}</td>
