@@ -42,7 +42,7 @@
            <td>${medlem/innmeldingsar}</td>
            <td align="center"><tal:check tal:condition="medlem/honnor">X</tal:check></td>
            <td align="center"><tal:check tal:condition="medlem/utenbys">X</tal:check></td>
-           <td class="pat-moment">${medlem/login_time}</td>
+           <td class="pat-moment" data-pat-moment="format:relative;">${medlem/login_time}</td>
            <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">•</span> </td>
     </tr>
     </tbody>
