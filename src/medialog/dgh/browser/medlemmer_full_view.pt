@@ -24,6 +24,7 @@
         <th>Innm.</th>
         <th>Honnør</th>
         <th>Utenbys</th>
+        <th>Login</th>
         <th>Verifisert</th>
       </tr>
     </thead>
@@ -39,9 +40,10 @@
            <td><a href="mailto:${medlem/email}">${medlem/email}</a></td>
            <td>${medlem/group}</td>
            <td>${medlem/innmeldingsar}</td>
-           <td>${medlem/honnor}</td>
-           <td>${medlem/utenbys}</td>
-           <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Nei!</span></td>
+           <td><tal:check tal:condition="medlem/honnor">X</tal:check></td>
+           <td><tal:check tal:condition="medlem/utenbys">X</tal:check></td>
+           <td>${medlem/login_time}</td>
+           <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Nei!</span> </td>
     </tr>
     </tbody>
 
