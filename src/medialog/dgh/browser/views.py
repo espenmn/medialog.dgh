@@ -49,7 +49,8 @@ class MedlemmerView(BrowserView):
             grupper = ', '.join(str(e) for e in group[1:])
             if grupper != 'AuthenticatedUsers':
                 userlist.append(
-                {'etternavn': member.getProperty('etternavn'),
+                { 'id': member.getProperty('id'),
+                  'etternavn': member.getProperty('etternavn'),
                   'fornavn': member.getProperty('fornavn'),
                   'tittel': member.getProperty('tittel'),
                   'email' : member.getProperty('email'),
