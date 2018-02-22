@@ -40,15 +40,16 @@ class MedlemmerView(BrowserView):
 
     @property
     def group_users(self):
+
         group = self.context.group or None
         usergroup = api.user.get_users(groupname=group)
         userlist = []
 
         for member in usergroup:
             group = api.group.get_groups(user=member)
-            grupper = ', '.join(str(e) for e in group[1:])
-            if grupper != 'AuthenticatedUsers':
-                userlist.append(
+            grupper = ' '.join(str(e) for e in group[0:]).strip("AuthenticatedUsers")
+            #if grupper != 'AuthenticatedUsers':
+            userlist.append(
                 { 'id': member.getProperty('id'),
                   'etternavn': member.getProperty('etternavn'),
                   'fornavn': member.getProperty('fornavn'),
