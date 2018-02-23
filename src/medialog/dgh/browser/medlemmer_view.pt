@@ -14,8 +14,8 @@
       <tr><th>Etternavn</th><th>Fornavn</th><th>Tittel</th><th>Klubb</th><th>Innm.</th><th>Verifisert?</th></tr>
     </thead>
     <tbody>
-      <tal:repeat  tal:repeat="medlem view/group_users">
-        <tr tal:condition="python: medlem.group != 'Administrators'">
+    <tal:repeat  tal:repeat="medlem view/group_users">
+        <tr    tal:define="group medlem/group" tal:condition="python: group !='Administrators'">
            <td>${medlem/etternavn}</td>
            <td>${medlem/fornavn}</td>
            <td>${medlem/tittel}</td>
@@ -23,7 +23,7 @@
            <td>${medlem/innmeldingsar}</td>
            <td tal:define="verifisert medlem/verified"><span tal:condition="verifisert">Nei</span></td>
          </tr>
-       </tal:repeat>
+    </tal:repeat>
     </tbody>
 
   </table>
