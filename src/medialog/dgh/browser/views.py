@@ -47,8 +47,9 @@ class MedlemmerView(BrowserView):
 
         for member in usergroup:
             group = api.group.get_groups(user=member)
-            grupper = ' '.join(str(e) for e in group[0:]).strip("AuthenticatedUsers")
-            #if grupper != 'AuthenticatedUsers':
+            grupper = ' '.join(str(e) for e in group[0:]).split()
+            grupper.remove('AuthenticatedUsers')
+            norm_grupper = ', '.join(str(e) for e in grupper)
             userlist.append(
                 { 'id': member.getProperty('id'),
                   'etternavn': member.getProperty('etternavn'),
@@ -63,7 +64,7 @@ class MedlemmerView(BrowserView):
                   'utenbys': member.getProperty('utenbys'),
                   'innmeldingsar': member.getProperty('innmeldingsar'),
                   'login_time': member.getProperty('login_time'),
-                  'group': grupper,
+                  'group': norm_grupper,
                   'verified': (member.getProperty('login_time').strftime('%Y') == '2000'),
                   'login_time': member.getProperty('login_time').strftime('%Y/%m/%d'),
                   })
