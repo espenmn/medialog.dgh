@@ -103,7 +103,7 @@ class GroupsEmail(BrowserView):
     def send_email(self, context, request, receipt):
         title = context.Title()
         description = context.Description()
-        body_html =  u'<html><div class="mailcontent"><h1 class="documentFirstHeading">' + title + u'</h1><div class="documentDescription description">' + description + u'</div>' + context.text.output + u'</div></html>'
+        body_html =  u'<html><div class="mailcontent"><h1 class="documentFirstHeading">' + title + u'</h1> + context.text.output + u'</div></html>'
 
         #for 'non HTML mail clients'
         transforms = api.portal.get_tool(name='portal_transforms')
