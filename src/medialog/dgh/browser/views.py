@@ -99,6 +99,7 @@ class GroupsEmail(BrowserView):
         title = context.Title()
         description = context.Description()
         body_html =  u'<html><div class="mailcontent"><h1 class="documentFirstHeading">' + title.decode('utf-8') + u'</h1><div class="documentDescription description">' + description.decode('utf-8') + u'</div>' + context.text.output + u'</div></html>'
+
         #for 'non HTML mail clients'
         transforms = api.portal.get_tool(name='portal_transforms')
         stream = transforms.convertTo('text/plain', body_html, mimetype='text/html')
