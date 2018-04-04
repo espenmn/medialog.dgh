@@ -67,6 +67,7 @@ class MedlemmerView(BrowserView):
                   'group': norm_grupper,
                   'verified': (member.getProperty('login_time').strftime('%Y') == '2000'),
                   'login_time': member.getProperty('login_time').strftime('%Y/%m/%d'),
+                  'fritatt_kontingent' :  member.getProperty('fritatt_kontingent'), 
                   })
 
         return userlist
