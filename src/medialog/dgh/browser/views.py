@@ -45,6 +45,10 @@ class MedlemmerView(BrowserView):
         usergroup = api.user.get_users(groupname=group)
         userlist = []
 
+        membership_tool = getToolByName(
+            self.context, 'portal_membership'
+        )
+
         for member in usergroup:
             group = api.group.get_groups(user=member)
             grupper = ' '.join(str(e) for e in group[0:]).split()
@@ -59,6 +63,7 @@ class MedlemmerView(BrowserView):
                   'postnr': member.getProperty('postnr'),
                   'poststed': member.getProperty('poststed'),
                   'honnor': member.getProperty('honn_rmedlem'),
+                  'portrait': membership_tool.getPersonalPortrait(member.getProperty('id')).absolute_url(),
                   'telefon': member.getProperty('telefon'),
                   'adresse': member.getProperty('adresse'),
                   'utenbys': member.getProperty('utenbys'),
@@ -67,7 +72,7 @@ class MedlemmerView(BrowserView):
                   'group': norm_grupper,
                   'verified': (member.getProperty('login_time').strftime('%Y') == '2000'),
                   'login_time': member.getProperty('login_time').strftime('%Y/%m/%d'),
-                  'fritatt_kontingent' :  member.getProperty('fritatt_kontingent'), 
+                  'fritatt_kontingent' :  member.getProperty('fritatt_kontingent'),
                   })
 
         return userlist

@@ -9,7 +9,7 @@
 <metal:main fill-slot="content-core">
   <p class="discreet">Klikk på tabellheadingen for å sortere</p>
 
-  <table class="sortable pat-tablesorter">
+  <table class="sortable pat-tablesorter" tal:define="portal_state context/@@plone_portal_state; portal_url portal_state/portal_url;">
     <thead>
       <tr>
         <th>Etternavn</th>
@@ -30,7 +30,7 @@
     </thead>
     <tbody>
     <tr  tal:repeat="medlem view/group_users">
-           <td><a href="/@@user-information?userid=${medlem/id}">${medlem/etternavn}</a></td>
+           <td><img class="portrett" src="${medlem/portrait}" height="22" width="22" alt="portrett" title="medlem/etternavn" /><a href="${portal_url}/@@user-information?userid=${medlem/id}" class="btn btn-lg btn-primary pat-plone-modal" data-pat-plone-modal="width: 80%">${medlem/etternavn}</a></td>
            <td>${medlem/fornavn}</td>
            <td>${medlem/tittel}</td>
            <td>${medlem/adresse}</td>
@@ -50,7 +50,6 @@
     </tbody>
 
   </table>
-
 <script type="text/javascript" src="http://cdn.ucb.org.br/Scripts/tablesorter/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="https://www.asvg.no/jquery.filtertable.js"></script>
 <script>
@@ -61,7 +60,10 @@ $(function(){
 
 
 <script>
-       $('table').filterTable();
+$('table').filterTable();
+$( ".portrett" ).click(function() {
+  $(this).css({"height": "auto", "width": "auto"} );
+});
 </script>
 
 </metal:main>
