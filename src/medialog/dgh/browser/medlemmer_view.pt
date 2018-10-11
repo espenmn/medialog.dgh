@@ -29,7 +29,7 @@
   </table>
 
 <script type="text/javascript" src="http://cdn.ucb.org.br/Scripts/tablesorter/jquery.tablesorter.min.js"></script>
-<script type="text/javascript" src="https://www.asvg.no/jquery.filtertable.js"></script>
+<script type="text/javascript" src="http://dgh.no/++theme++dghtheme/jquery.filtertable.js"></script>
 <script>
 $(function(){
   $('table.sortable').tablesorter({ sortList: [[0,0], [1,0]] });
