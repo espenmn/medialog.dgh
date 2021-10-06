@@ -75,7 +75,8 @@ class MedlemmerView(BrowserView):
                   'fritatt_kontingent' :  member.getProperty('fritatt_kontingent'),
                   })
 
-        return userlist
+        return sorted(userlist, key=lambda medlem: medlem['etternavn'])
+        #return userlist
 
 
 class GroupsEmail(BrowserView):
