@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+        xmlns:tal="http://xml.zope.org/namespaces/tal"
+        xmlns:metal="http://xml.zope.org/namespaces/metal"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        lang="en"
+        metal:use-macro="context/main_template/macros/master"
+        i18n:domain="medialog.dgh">
+  <body>
+  <metal:main fill-slot="main">
+     <p>&lt;v14.35&gt;&lt;e8&gt;</p>
+      <div tal:repeat="medlem view/group_users">
+         <tal:check tal:condition="medlem/fritatt_kontingent">
+          <p>@\:Navn: ${medlem/fornavn} ${medlem/etternavn}</p><p>@\:Vei: ${medlem/adresse}</p><p>@\:Post$: ${medlem/postnr} ${medlem/poststed}</p>
+         </tal:check>
+      </div>
+
+      <div tal:repeat="medlem view/group_users">
+         <tal:check tal:condition="not: medlem/fritatt_kontingent">
+            <tal:chekk tal:condition="not: medlem/utenbys">
+           <p>@\:Navn: ${medlem/fornavn} ${medlem/etternavn}</p><p>@\:Vei: ${medlem/adresse}</p><p>@\:Post$: ${medlem/postnr} ${medlem/poststed}</p>
+         </tal:chekk>
+         </tal:check>
+      </div>
+
+      <div tal:repeat="medlem view/group_users">
+         <tal:check tal:condition="not: medlem/fritatt_kontingent">
+           <tal:chekk tal:condition="medlem/utenbys">
+           <p>@\:Navn: ${medlem/fornavn} ${medlem/etternavn}</p><p>@\:Vei: ${medlem/adresse}</p><p>@\:Post$: ${medlem/postnr} ${medlem/poststed}</p>
+         </tal:chekk>
+         </tal:check>
+      </div>
+
+  </metal:main>
+  </body>
+  </html>

@@ -26,6 +26,15 @@
         permission="zope2.View"
     />
 
+    <browser:page
+          name="faktura_export"
+          for="plone.dexterity.interfaces.IDexterityContent"
+          layer="medialog.dgh.interfaces.IMedialogDghLayer"
+          class="medialog.dgh.browser.views.ExportView"
+          permission="zope2.View"
+      />
+
+
   <browser:page
         name="send_groupmail"
         for="*"

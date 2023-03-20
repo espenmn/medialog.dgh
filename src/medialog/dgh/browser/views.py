@@ -79,6 +79,51 @@ class MedlemmerView(BrowserView):
         #return userlist
 
 
+class ExportView(BrowserView):
+    """ View for export to Quark Xpress
+    """
+
+    template   = ViewPageTemplateFile('faktura_export.pt')
+
+    def __call__(self, *args, **kw):
+        #current = api.user.get_current()
+        return self.template(self.context)
+
+    def all_users(self):
+        return api.user.get_users()
+
+    @property
+    def group_users(self):
+
+        group = self.context.group or None
+        usergroup = api.user.get_users(groupname=group)
+        userlist = []
+
+        membership_tool = getToolByName(
+            self.context, 'portal_membership'
+        )
+
+        for member in usergroup:
+            group = api.group.get_groups(user=member)
+            grupper = ' '.join(str(e) for e in group[0:]).split()
+            grupper.remove('AuthenticatedUsers')
+            norm_grupper = ', '.join(str(e) for e in grupper)
+            userlist.append(
+                { 'id': member.getProperty('id'),
+                  'etternavn': member.getProperty('etternavn'),
+                  'fornavn': member.getProperty('fornavn'),
+                  'adresse': member.getProperty('adresse'),
+                  'postnr': member.getProperty('postnr'),
+                  'poststed': member.getProperty('poststed'),
+                  'utenbys': member.getProperty('utenbys'),
+                  'fritatt_kontingent' :  member.getProperty('fritatt_kontingent'),
+                  })
+
+        return sorted(userlist, key=lambda medlem: medlem['fritatt_kontingent'])
+        #return userlist
+
+
+
 class GroupsEmail(BrowserView):
     """ send email to everyone in a group  """
 
